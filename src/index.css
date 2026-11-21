@@ -1,0 +1,158 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-cursive: "Reenie Beanie", cursive;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-morning-dew: #F7FAF6;
+  --color-eucalyptus: #EBF3EA;
+  --color-fern-mist: #E1ECE0;
+  --color-sunbeam: #F1F6E7;
+  --color-celadon: #B7D7BD;
+  --color-botanical: #3E6F4E;
+  --color-pine: #18241C;
+  --color-moss: #3F5246;
+  --color-hairline: #DDE7DC;
+
+  /* Faded Dark Burnt-Orange Contrast Accents */
+  --color-ember: #B84D1D;
+  --color-ember-deep: #963B14;
+  --color-ember-warm: #D97A4A;
+  --color-ember-wash: #F8EDE6;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    background-color: var(--color-morning-dew);
+    color: var(--color-pine);
+    scroll-padding-top: 6.5rem;
+    overflow-x: clip;
+  }
+
+  body {
+    overflow-x: clip;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-sans);
+    letter-spacing: -0.025em;
+    text-wrap: balance;
+  }
+
+  button,
+  a,
+  input,
+  select,
+  textarea {
+    outline-color: #B84D1D;
+  }
+}
+
+.font-cursive {
+  font-family: var(--font-cursive);
+}
+
+.tabular-nums-mono {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.soft-card-shadow {
+  box-shadow: 0 6px 26px -4px rgba(24, 36, 28, 0.07);
+}
+
+.ember-card-shadow {
+  box-shadow: 0 10px 30px -6px rgba(184, 77, 29, 0.14), 0 4px 16px -4px rgba(24, 36, 28, 0.06);
+}
+
+@keyframes floatSlow {
+  0%,
+  100% {
+    transform: translateY(-10px) scale(1);
+  }
+  50% {
+    transform: translateY(10px) scale(1.03);
+  }
+}
+
+@keyframes floatSlowReverse {
+  0%,
+  100% {
+    transform: translateY(10px) scale(1.02);
+  }
+  50% {
+    transform: translateY(-10px) scale(0.98);
+  }
+}
+
+@keyframes mistDrift {
+  0% {
+    transform: translate3d(-2%, 0, 0) scale(1);
+  }
+  100% {
+    transform: translate3d(4%, -2%, 0) scale(1.06);
+  }
+}
+
+@keyframes emberPing {
+  0% {
+    box-shadow: 0 0 0 0 rgba(196, 91, 40, 0.55);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(196, 91, 40, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(196, 91, 40, 0);
+  }
+}
+
+.animate-blob-slow {
+  animation: floatSlow 7s ease-in-out infinite;
+}
+
+.animate-blob-slow-reverse {
+  animation: floatSlowReverse 8s ease-in-out infinite;
+}
+
+.animate-mist-drift {
+  animation: mistDrift 18s ease-in-out infinite alternate;
+}
+
+.animate-ember-ping {
+  animation: emberPing 2.4s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .animate-blob-slow,
+  .animate-blob-slow-reverse,
+  .animate-mist-drift,
+  .animate-ember-ping {
+    animation: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
