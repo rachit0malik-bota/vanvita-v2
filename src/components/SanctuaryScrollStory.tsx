@@ -216,12 +216,12 @@ export function SanctuaryScrollStory({
     offset: ['start start', 'end end'],
   });
 
-  // Gentle damped spring for velvety scroll-coupled motion (zero React re-renders)
+  // Responsive spring with low mass for instant, zero-lag scroll tracking
   const smoothProgress = useSpring(scrollYProgress, {
-    stiffness: 95,
-    damping: 28,
-    mass: 0.35,
-    restDelta: 0.0005,
+    stiffness: 150,
+    damping: 30,
+    mass: 0.12,
+    restDelta: 0.0001,
   });
 
   // Still-to-Video cross-fade: crisp hero still holds at scroll 0, smoothly dissolves into active video
@@ -255,35 +255,70 @@ export function SanctuaryScrollStory({
   // Subtle #F2EAE5 bottom horizon blend as the white Beat 5 panel rises up
   const bottomBlendOpacity = useTransform(smoothProgress, [0.85, 0.98], [0, 1]);
 
-  // Dedicated 60fps rAF video scrubbing loop — zero React state updates during scroll
+  // High-performance 60fps seek loop with event-driven queueing for stutter-free scrubbing
   useEffect(() => {
     if (prefersReducedMotion || videoError || !videoReady) return;
 
+    const video = videoRef.current;
+    if (!video) return;
+
     let rafId = 0;
-    let lastRequestedTime = -1;
+    let isSeeking = false;
+    let pendingTargetTime: number | null = null;
+
+    const performSeek = (targetTime: number) => {
+      if (!video || !Number.isFinite(video.duration) || video.duration <= 0) return;
+
+      if ('fastSeek' in video && typeof (video as any).fastSeek === 'function') {
+        try {
+          (video as any).fastSeek(targetTime);
+          return;
+        } catch {
+          // Fall back to currentTime assignment
+        }
+      }
+
+      if (!isSeeking) {
+        isSeeking = true;
+        try {
+          video.currentTime = targetTime;
+        } catch {
+          isSeeking = false;
+        }
+      } else {
+        pendingTargetTime = targetTime;
+      }
+    };
+
+    const handleSeeked = () => {
+      isSeeking = false;
+      if (pendingTargetTime !== null) {
+        const nextTime = pendingTargetTime;
+        pendingTargetTime = null;
+        performSeek(nextTime);
+      }
+    };
+
+    video.addEventListener('seeked', handleSeeked);
 
     const tick = () => {
-      const video = videoRef.current;
-      if (video && video.readyState >= 2 && Number.isFinite(video.duration) && video.duration > 0) {
+      if (video && Number.isFinite(video.duration) && video.duration > 0) {
         const progress = clamp01(smoothProgress.get() / 0.94);
         const targetTime = Math.min(video.duration - 0.04, progress * video.duration);
 
-        if (!video.seeking && Math.abs(targetTime - video.currentTime) > 0.018) {
-          if (Math.abs(targetTime - lastRequestedTime) > 0.008) {
-            lastRequestedTime = targetTime;
-            try {
-              video.currentTime = targetTime;
-            } catch {
-              // Ignore transient seek guards
-            }
-          }
+        if (Math.abs(targetTime - video.currentTime) > 0.015) {
+          performSeek(targetTime);
         }
       }
       rafId = window.requestAnimationFrame(tick);
     };
 
     rafId = window.requestAnimationFrame(tick);
-    return () => window.cancelAnimationFrame(rafId);
+
+    return () => {
+      window.cancelAnimationFrame(rafId);
+      video.removeEventListener('seeked', handleSeeked);
+    };
   }, [prefersReducedMotion, videoError, videoReady, smoothProgress]);
 
   // Unified calm editorial color-grade matching the #F2EAE5 morning-dew sanctuary palette
@@ -374,7 +409,7 @@ export function SanctuaryScrollStory({
                 style={{
                   opacity: veilOpacity,
                   background:
-                    'linear-gradient(180deg, rgba(45,28,22,0.68) 0%, rgba(45,28,22,0.54) 50%, rgba(45,28,22,0.74) 100%)',
+                    'linear-gradient(180deg, rgba(30,16,10,0.76) 0%, rgba(30,16,10,0.62) 45%, rgba(30,16,10,0.85) 100%)',
                 }}
                 className="pointer-events-none absolute inset-0 will-change-[opacity]"
               />
@@ -408,7 +443,7 @@ export function SanctuaryScrollStory({
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.85, ease: WELLNESS_EASE }}
-                className="text-[13.5px] font-medium tracking-[0.04em] text-[#5A1E31] mb-4"
+                className="font-display tracking-[0.16em] uppercase text-[12px] font-semibold text-[#752D43] mb-4 bg-white/75 backdrop-blur-md px-4 py-1.5 rounded-full inline-block border border-[#D8CEC4]/60 shadow-xs"
               >
                 VANVITA Wellbeing · Live in Europe &amp; the USA
               </motion.p>
@@ -417,7 +452,7 @@ export function SanctuaryScrollStory({
                 initial={{ opacity: 0, y: 18 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.95, delay: 0.08, ease: WELLNESS_EASE }}
-                className="font-serif text-[46px] sm:text-[64px] lg:text-[78px] font-normal text-[#3B2314] leading-[1.04] tracking-[-0.015em] mb-5"
+                className="font-serif text-[46px] sm:text-[64px] lg:text-[78px] font-normal text-[#3B2314] leading-[1.04] tracking-[-0.015em] mb-5 drop-shadow-[0_1px_3px_rgba(255,255,255,0.9)]"
               >
                 Vanvita{' '}
                 <span className="font-cursive text-[66px] sm:text-[88px] lg:text-[104px] text-[#E8508A] font-normal leading-none inline-block -mb-2">
@@ -430,7 +465,7 @@ export function SanctuaryScrollStory({
                 initial={{ opacity: 0, y: 14 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.9, delay: 0.18, ease: WELLNESS_EASE }}
-                className="font-sans-clean text-[16px] sm:text-[18px] leading-[1.65] text-[#6E5343] max-w-[560px] mx-auto mb-7 font-normal"
+                className="font-sans-clean text-[16px] sm:text-[18px] leading-[1.65] text-[#3B2314] max-w-[560px] mx-auto mb-7 font-normal bg-white/50 backdrop-blur-[10px] py-2.5 px-5 rounded-2xl border border-white/60 shadow-xs"
               >
                 Expert-led yoga, meditation, breathwork, corporate burnout support, and HerWAY
                 postpartum guidance—live online for Europe and the USA, and through retreats in
@@ -508,17 +543,19 @@ export function SanctuaryScrollStory({
               style={{ opacity: beat2Opacity, y: beat2Y }}
               className="absolute inset-0 z-20 flex items-center justify-center px-6 pointer-events-none will-change-[transform,opacity]"
             >
-              <div className="max-w-3xl text-center text-[#F2EAE5]">
-                <p className="font-display tracking-[0.2em] uppercase text-[12px] font-medium text-[#E8508A] mb-4">Our Purpose</p>
-                <h2 className="font-serif text-[38px] sm:text-[54px] lg:text-[66px] font-normal leading-[1.08] tracking-[-0.015em] mb-5">
+              <div className="max-w-3xl text-center px-8 py-9 sm:px-12 sm:py-11 rounded-[2.5rem] bg-[#2A170C]/65 backdrop-blur-[16px] border border-white/15 shadow-[0_24px_50px_rgba(0,0,0,0.35)] mx-auto">
+                <span className="inline-block font-display tracking-[0.22em] uppercase text-[11.5px] font-semibold text-[#FF9EBA] bg-white/10 px-4 py-1.5 rounded-full border border-white/15 mb-5 backdrop-blur-md">
+                  Our Purpose
+                </span>
+                <h2 className="font-serif text-[38px] sm:text-[54px] lg:text-[66px] font-normal leading-[1.08] tracking-[-0.015em] mb-5 text-[#FAF6F3] drop-shadow-[0_2px_12px_rgba(0,0,0,0.5)]">
                   Your wellness, guided.
                   <br />
                   Live well. Live{' '}
-                  <span className="font-cursive text-[56px] sm:text-[78px] lg:text-[92px] text-[#E8508A] font-normal leading-none">
+                  <span className="font-cursive text-[60px] sm:text-[84px] lg:text-[98px] text-[#FF85A2] font-normal leading-none drop-shadow-[0_2px_14px_rgba(232,80,138,0.5)]">
                     fully.
                   </span>
                 </h2>
-                <p className="text-[16px] sm:text-[18px] leading-[1.68] text-[#F2EAE5]/95 max-w-xl mx-auto">
+                <p className="font-sans-clean text-[16px] sm:text-[18px] leading-[1.68] text-[#F2EAE5]/95 max-w-xl mx-auto font-normal drop-shadow-xs">
                   Personal, practical wellbeing support made easy to reach—whether you join from
                   London, Zurich, New York, or San Francisco.
                 </p>
@@ -536,8 +573,8 @@ export function SanctuaryScrollStory({
               }}
               className="absolute inset-0 z-20 flex flex-col justify-center px-6 sm:px-10 max-w-6xl mx-auto will-change-[transform,opacity]"
             >
-              <div className="max-w-2xl mb-10">
-                <p className="text-[24px] sm:text-[32px] lg:text-[36px] font-normal leading-[1.28] tracking-[-0.02em] text-[#F2EAE5]">
+              <div className="max-w-2xl mb-10 p-7 sm:p-8 rounded-[2rem] bg-[#2A170C]/65 backdrop-blur-[16px] border border-white/15 shadow-[0_20px_45px_rgba(0,0,0,0.3)]">
+                <p className="font-serif text-[24px] sm:text-[32px] lg:text-[36px] font-normal leading-[1.28] tracking-[-0.015em] text-[#FAF6F3] drop-shadow-sm">
                   Expert-led wellbeing for individuals, companies, and new mothers — delivered live
                   online at times that suit Europe and the USA, and through licensed retreats in
                   India.
@@ -552,8 +589,8 @@ export function SanctuaryScrollStory({
                     onClick={() => onNavigate(item.target)}
                     className="text-left p-5 rounded-2xl bg-[#F2EAE5]/95 hover:bg-white border border-[#D8CEC4] soft-card-shadow transition-colors cursor-pointer"
                   >
-                    <p className="text-[15px] font-medium text-[#51372E] mb-1">{item.title}</p>
-                    <p className="text-[13.5px] leading-snug text-[#634B41] mb-2">{item.detail}</p>
+                    <p className="text-[15px] font-medium text-[#3B2314] mb-1">{item.title}</p>
+                    <p className="text-[13.5px] leading-snug text-[#6E5343] mb-2">{item.detail}</p>
                     <span className="text-[13px] font-medium text-[#752D43]">Explore →</span>
                   </button>
                 ))}
@@ -572,11 +609,11 @@ export function SanctuaryScrollStory({
               className="absolute inset-0 z-20 flex flex-col justify-center px-6 sm:px-10 max-w-6xl mx-auto will-change-[transform,opacity]"
             >
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                <div className="lg:col-span-6 p-7 sm:p-9 rounded-[2rem] bg-[#51372E]/86 border border-white/20 backdrop-blur-xl text-[#F2EAE5] soft-card-shadow">
-                  <p className="text-[13.5px] font-medium text-[#E8899D] mb-3">
+                <div className="lg:col-span-6 p-7 sm:p-9 rounded-[2rem] bg-[#2A170C]/80 border border-white/20 backdrop-blur-xl text-[#F2EAE5] shadow-[0_20px_50px_rgba(0,0,0,0.35)]">
+                  <p className="font-display tracking-[0.2em] uppercase text-[12px] font-semibold text-[#FF9EBA] mb-3">
                     Live Online · Europe &amp; USA Time Zones
                   </p>
-                  <h2 className="text-[30px] sm:text-[38px] font-normal leading-[1.12] tracking-[-0.025em] text-[#F2EAE5] mb-4">
+                  <h2 className="font-serif text-[30px] sm:text-[38px] font-normal leading-[1.12] tracking-[-0.015em] text-[#FAF6F3] mb-4">
                     Practical wellbeing built for everyday life.
                   </h2>
                   <p className="text-[15px] leading-[1.7] text-[#F2EAE5]/92 mb-6">
