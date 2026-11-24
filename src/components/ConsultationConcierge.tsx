@@ -320,44 +320,44 @@ export function ConsultationConcierge({
       {/* Faded dark-orange & morning foliage atmospheric halos */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute top-10 left-1/4 w-[460px] h-[460px] rounded-full bg-[#B84D1D]/11 blur-[115px] animate-blob-slow"
+        className="pointer-events-none absolute top-10 left-1/4 w-[460px] h-[460px] rounded-full bg-[#752D43]/11 blur-[115px] animate-blob-slow"
       />
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute bottom-0 right-1/4 w-[460px] h-[460px] rounded-full bg-[#D7ECD9]/75 blur-[110px] animate-blob-slow-reverse"
+        className="pointer-events-none absolute bottom-0 right-1/4 w-[460px] h-[460px] rounded-full bg-[#F5EAE8]/75 blur-[110px] animate-blob-slow-reverse"
       />
 
       <div className="relative z-10 max-w-6xl mx-auto px-6">
         <RevealOnScroll>
           <div className="max-w-2xl mx-auto text-center mb-12">
-            {/* Deep pine rounded-square emblem with two-leaf V Vanvita logo */}
+            {/* Deep chocolate rounded-square emblem with Vanvita logo */}
             <div
               aria-hidden="true"
-              className="w-14 h-14 rounded-2xl bg-[#18241C] border border-[#B84D1D]/30 flex items-center justify-center mx-auto mb-6 ember-card-shadow"
+              className="w-16 h-16 rounded-2xl bg-[#51372E] border border-[#DC7188]/35 flex items-center justify-center mx-auto mb-6 soft-card-shadow"
             >
-              <VanvitaLogo size={30} inverted />
+              <VanvitaLogo size={36} inverted />
             </div>
 
-            <p className="text-[14px] font-medium text-[#963B14] mb-3">
+            <p className="text-[14px] font-medium text-[#752D43] mb-3">
               Contact &amp; Booking Desk · Europe &amp; USA Time Zones
             </p>
-            <h2 className="text-[38px] md:text-[54px] font-normal leading-[1.08] tracking-[-0.025em] text-[#18241C] mb-4">
+            <h2 className="text-[38px] md:text-[54px] font-normal leading-[1.08] tracking-[-0.025em] text-[#51372E] mb-4">
               Your wellness, guided on{' '}
-              <span className="font-cursive text-[52px] md:text-[68px] text-[#B84D1D] font-normal leading-none">
+              <span className="font-cursive text-[52px] md:text-[68px] text-[#DC7188] font-normal leading-none">
                 your
               </span>{' '}
               time.
             </h2>
-            <p className="text-[15px] leading-[1.65] text-[#526458] max-w-xl mx-auto">
+            <p className="text-[15px] leading-[1.65] text-[#72584D] max-w-xl mx-auto">
               Book a complimentary intro session, one-to-one coaching call, HerWAY pilot welcome,
               or corporate burnout-prevention briefing—automatically shown in your local clock.
             </p>
 
-            <div className="mt-6 flex flex-wrap items-center justify-center gap-4 text-[13px] text-[#526458]">
-              <span className="inline-flex items-center gap-2 bg-white/90 px-4 py-2 rounded-full border border-[#DDE7DC]">
-                <Globe className="w-4 h-4 text-[#B84D1D]" />
+            <div className="mt-6 flex flex-wrap items-center justify-center gap-4 text-[13px] text-[#72584D]">
+              <span className="inline-flex items-center gap-2 bg-white/90 px-4 py-2 rounded-full border border-[#D8CEC4]">
+                <Globe className="w-4 h-4 text-[#752D43]" />
                 <span>{selectedTz.city}:</span>
-                <span className="tabular-nums-mono text-[#18241C] font-medium">
+                <span className="tabular-nums-mono text-[#51372E] font-medium">
                   {liveLocalClock}
                 </span>
               </span>
@@ -366,9 +366,9 @@ export function ConsultationConcierge({
                 <button
                   type="button"
                   onClick={onOpenInquiries}
-                  className="inline-flex items-center gap-2 px-4 py-2 text-[13px] font-medium text-[#18241C] bg-white border border-[#B84D1D]/30 hover:border-[#B84D1D] rounded-full transition-colors whitespace-nowrap shrink-0 cursor-pointer"
+                  className="inline-flex items-center gap-2 px-4 py-2 text-[13px] font-medium text-[#51372E] bg-white border border-[#752D43]/30 hover:border-[#752D43] rounded-full transition-colors whitespace-nowrap shrink-0 cursor-pointer"
                 >
-                  <CalendarCheck2 className="w-4 h-4 text-[#B84D1D]" />
+                  <CalendarCheck2 className="w-4 h-4 text-[#752D43]" />
                   <span>
                     My Bookings (<span className="tabular-nums-mono">{activeInquiryCount}</span>)
                   </span>
@@ -379,18 +379,18 @@ export function ConsultationConcierge({
         </RevealOnScroll>
 
         <RevealOnScroll delay={0.1}>
-          <div className="bg-white/95 backdrop-blur-md border border-[#DDE7DC] rounded-[2.5rem] ember-card-shadow p-7 md:p-10">
+          <div className="bg-white/95 backdrop-blur-md border border-[#D8CEC4] rounded-[2.5rem] ember-card-shadow p-7 md:p-10">
             {draft.contextLabel && (
-              <div className="mb-8 px-5 py-3.5 bg-[#F8EDE6] border border-[#B84D1D]/20 rounded-full flex items-center justify-between gap-4 text-[13px]">
+              <div className="mb-8 px-5 py-3.5 bg-[#FBF0F2] border border-[#752D43]/20 rounded-full flex items-center justify-between gap-4 text-[13px]">
                 <div className="truncate">
-                  <span className="text-[#963B14] mr-2 font-medium">Selected pathway:</span>
-                  <span className="font-medium text-[#18241C]">{draft.contextLabel}</span>
+                  <span className="text-[#5A1E31] mr-2 font-medium">Selected pathway:</span>
+                  <span className="font-medium text-[#51372E]">{draft.contextLabel}</span>
                 </div>
                 <button
                   type="button"
                   onClick={onClearDraftContext}
                   aria-label="Clear pre-filled selection"
-                  className="inline-flex items-center gap-1 text-[#963B14] hover:text-[#18241C] cursor-pointer whitespace-nowrap shrink-0"
+                  className="inline-flex items-center gap-1 text-[#5A1E31] hover:text-[#51372E] cursor-pointer whitespace-nowrap shrink-0"
                 >
                   <X className="w-4 h-4" />
                   <span>Clear</span>
@@ -401,10 +401,10 @@ export function ConsultationConcierge({
             {recentConfirmation && (
               <div
                 role="status"
-                className="mb-8 p-6 bg-[#18241C] text-[#F7FAF6] rounded-[2rem] border border-[#B84D1D]/35 flex flex-col md:flex-row md:items-center justify-between gap-6"
+                className="mb-8 p-6 bg-[#51372E] text-[#F2EAE5] rounded-[2rem] border border-[#752D43]/35 flex flex-col md:flex-row md:items-center justify-between gap-6"
               >
                 <div className="space-y-1.5">
-                  <div className="flex items-center gap-2 text-[13px] text-[#E6A47E]">
+                  <div className="flex items-center gap-2 text-[13px] text-[#E8899D]">
                     <CheckCircle2 className="w-4 h-4 shrink-0" />
                     <span>{getConfirmationHeading(recentConfirmation.inquiryType)}</span>
                     <span aria-hidden="true">·</span>
@@ -414,7 +414,7 @@ export function ConsultationConcierge({
                     {recentConfirmation.subjectTitle}
                     {recentConfirmation.suiteName ? ` — ${recentConfirmation.suiteName}` : ''}
                   </p>
-                  <p className="text-[13px] text-[#F7FAF6]/80">
+                  <p className="text-[13px] text-[#F2EAE5]/80">
                     {recentConfirmation.formattedLocalDate} at{' '}
                     <span className="tabular-nums-mono">
                       {recentConfirmation.formattedLocalTime}
@@ -426,7 +426,7 @@ export function ConsultationConcierge({
                 <button
                   type="button"
                   onClick={onOpenInquiries}
-                  className="px-6 py-3 text-[13px] font-medium bg-[#B84D1D] text-[#F7FAF6] hover:bg-[#963B14] rounded-full transition-colors whitespace-nowrap shrink-0 cursor-pointer self-start md:self-center"
+                  className="px-6 py-3 text-[13px] font-medium bg-[#752D43] text-[#F2EAE5] hover:bg-[#5A1E31] rounded-full transition-colors whitespace-nowrap shrink-0 cursor-pointer self-start md:self-center"
                 >
                   Manage Bookings
                 </button>
@@ -438,10 +438,10 @@ export function ConsultationConcierge({
                 {/* Left Column */}
                 <div className="lg:col-span-6 space-y-6">
                   <div>
-                    <label className="block text-[13px] font-medium text-[#18241C] mb-2.5">
+                    <label className="block text-[13px] font-medium text-[#51372E] mb-2.5">
                       01. How Can We Support You?
                     </label>
-                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-1 p-1.5 bg-[#EBF3EA] rounded-[1.5rem] sm:rounded-full">
+                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-1 p-1.5 bg-[#EAE1DA] rounded-[1.5rem] sm:rounded-full">
                       {(
                         [
                           { id: 'free-intro', label: 'Free Intro' },
@@ -460,15 +460,15 @@ export function ConsultationConcierge({
                             onClick={() => setInquiryType(tabOption.id)}
                             className={`relative py-2.5 px-2 text-[12px] sm:text-[13px] font-medium rounded-full transition-colors cursor-pointer whitespace-nowrap ${
                               isSelected
-                                ? 'text-[#F7FAF6]'
-                                : 'text-[#526458] hover:text-[#18241C]'
+                                ? 'text-[#F2EAE5]'
+                                : 'text-[#72584D] hover:text-[#51372E]'
                             }`}
                           >
                             {isSelected && (
                               <motion.span
                                 layoutId="conciergePurposePill"
                                 transition={{ duration: 0.28, ease: [0.16, 1, 0.3, 1] }}
-                                className="absolute inset-0 bg-[#18241C] rounded-full"
+                                className="absolute inset-0 bg-[#51372E] rounded-full"
                               />
                             )}
                             <span className="relative z-10">{tabOption.label}</span>
@@ -482,11 +482,11 @@ export function ConsultationConcierge({
                     <div className="flex items-center justify-between gap-2 mb-2.5">
                       <label
                         htmlFor="timezone-select"
-                        className="text-[13px] font-medium text-[#18241C]"
+                        className="text-[13px] font-medium text-[#51372E]"
                       >
                         02. Your Time Zone (Europe &amp; USA)
                       </label>
-                      <span className="text-[12px] text-[#963B14]">
+                      <span className="text-[12px] text-[#5A1E31]">
                         Live clock sync
                       </span>
                     </div>
@@ -498,7 +498,7 @@ export function ConsultationConcierge({
                         const next = timezoneOptions.find((tz) => tz.iana === e.target.value);
                         if (next) setSelectedTz(next);
                       }}
-                      className="w-full px-5 py-3 text-[14px] text-[#18241C] bg-[#F7FAF6] border border-[#DDE7DC] rounded-full focus:border-[#B84D1D] focus:outline-none mb-3"
+                      className="w-full px-5 py-3 text-[14px] text-[#51372E] bg-[#F2EAE5] border border-[#D8CEC4] rounded-full focus:border-[#752D43] focus:outline-none mb-3"
                     >
                       {timezoneOptions.map((tz) => (
                         <option key={tz.iana} value={tz.iana}>
@@ -517,8 +517,8 @@ export function ConsultationConcierge({
                             onClick={() => setSelectedTz(tz)}
                             className={`px-3.5 py-1.5 text-[12px] rounded-full border transition-colors cursor-pointer whitespace-nowrap ${
                               isActive
-                                ? 'border-[#18241C] bg-[#18241C] text-[#F7FAF6]'
-                                : 'border-[#DDE7DC] bg-white text-[#526458] hover:text-[#18241C] hover:border-[#B84D1D]/40'
+                                ? 'border-[#51372E] bg-[#51372E] text-[#F2EAE5]'
+                                : 'border-[#D8CEC4] bg-white text-[#72584D] hover:text-[#51372E] hover:border-[#752D43]/40'
                             }`}
                           >
                             {tz.city}
@@ -529,7 +529,7 @@ export function ConsultationConcierge({
                   </div>
 
                   <div>
-                    <label className="block text-[13px] font-medium text-[#18241C] mb-2.5">
+                    <label className="block text-[13px] font-medium text-[#51372E] mb-2.5">
                       03. Preferred Date
                     </label>
                     <div className="grid grid-cols-4 sm:grid-cols-7 gap-2">
@@ -547,13 +547,13 @@ export function ConsultationConcierge({
                             onClick={() => setSelectedDateIso(iso)}
                             className={`py-2.5 px-1.5 rounded-2xl border text-center transition-colors cursor-pointer ${
                               isSelected
-                                ? 'border-[#18241C] bg-[#18241C] text-[#F7FAF6]'
-                                : 'border-[#DDE7DC] bg-[#F7FAF6] text-[#18241C] hover:bg-[#F8EDE6]'
+                                ? 'border-[#51372E] bg-[#51372E] text-[#F2EAE5]'
+                                : 'border-[#D8CEC4] bg-[#F2EAE5] text-[#51372E] hover:bg-[#FBF0F2]'
                             }`}
                           >
                             <span
                               className={`block text-[11px] ${
-                                isSelected ? 'text-[#F7FAF6]/75' : 'text-[#526458]'
+                                isSelected ? 'text-[#F2EAE5]/75' : 'text-[#72584D]'
                               }`}
                             >
                               {weekday}
@@ -563,7 +563,7 @@ export function ConsultationConcierge({
                             </span>
                             <span
                               className={`block text-[11px] ${
-                                isSelected ? 'text-[#E6A47E]' : 'text-[#6F8275]'
+                                isSelected ? 'text-[#E8899D]' : 'text-[#8A7367]'
                               }`}
                             >
                               {monthShort}
@@ -575,7 +575,7 @@ export function ConsultationConcierge({
                   </div>
 
                   <div>
-                    <span className="block text-[13px] font-medium text-[#18241C] mb-2.5">
+                    <span className="block text-[13px] font-medium text-[#51372E] mb-2.5">
                       04. Live Session Window ({selectedTz.city})
                     </span>
                     <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
@@ -589,16 +589,16 @@ export function ConsultationConcierge({
                             onClick={() => setSelectedSlotUtcIso(slot.utcIso)}
                             className={`py-2.5 px-3 rounded-2xl border text-left transition-colors ${
                               slot.isBooked
-                                ? 'border-[#DDE7DC] bg-[#EBF3EA]/50 text-[#8FA395] line-through cursor-not-allowed'
+                                ? 'border-[#D8CEC4] bg-[#EAE1DA]/50 text-[#8FA395] line-through cursor-not-allowed'
                                 : isSelected
-                                  ? 'border-[#B84D1D] bg-[#F8EDE6] text-[#18241C] cursor-pointer'
-                                  : 'border-[#DDE7DC] bg-[#F7FAF6] text-[#18241C] hover:border-[#B84D1D]/50 cursor-pointer'
+                                  ? 'border-[#752D43] bg-[#FBF0F2] text-[#51372E] cursor-pointer'
+                                  : 'border-[#D8CEC4] bg-[#F2EAE5] text-[#51372E] hover:border-[#752D43]/50 cursor-pointer'
                             }`}
                           >
                             <span className="tabular-nums-mono block text-[13px] font-medium whitespace-nowrap">
                               {slot.localLabel}
                             </span>
-                            <span className="block text-[11px] mt-0.5 text-[#526458]">
+                            <span className="block text-[11px] mt-0.5 text-[#72584D]">
                               {slot.isBooked ? 'Reserved' : slot.localDayShift}
                             </span>
                           </button>
@@ -606,7 +606,7 @@ export function ConsultationConcierge({
                       })}
                     </div>
                     {errors.slot && (
-                      <p className="mt-2 flex items-center gap-1.5 text-[12px] text-[#9E3B33]">
+                      <p className="mt-2 flex items-center gap-1.5 text-[12px] text-[#752D43]">
                         <AlertCircle className="w-3.5 h-3.5 shrink-0" />
                         <span>{errors.slot}</span>
                       </p>
@@ -615,13 +615,13 @@ export function ConsultationConcierge({
                 </div>
 
                 {/* Right Column */}
-                <div className="lg:col-span-6 space-y-5 lg:border-l lg:border-[#EBF3EA] lg:pl-10">
+                <div className="lg:col-span-6 space-y-5 lg:border-l lg:border-[#EAE1DA] lg:pl-10">
                   {inquiryType === 'free-intro' ? (
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
                         <label
                           htmlFor="intro-focus-select"
-                          className="block text-[13px] font-medium text-[#18241C] mb-2"
+                          className="block text-[13px] font-medium text-[#51372E] mb-2"
                         >
                           Intro Focus
                         </label>
@@ -629,7 +629,7 @@ export function ConsultationConcierge({
                           id="intro-focus-select"
                           value={selectedProgramFocus}
                           onChange={(e) => setSelectedProgramFocus(e.target.value)}
-                          className="w-full px-4 py-3 text-[14px] text-[#18241C] bg-[#F7FAF6] border border-[#DDE7DC] rounded-full focus:border-[#B84D1D] focus:outline-none"
+                          className="w-full px-4 py-3 text-[14px] text-[#51372E] bg-[#F2EAE5] border border-[#D8CEC4] rounded-full focus:border-[#752D43] focus:outline-none"
                         >
                           <option value="Live Group Sessions (Yoga, Meditation & Breathwork)">
                             Live Group Sessions
@@ -652,7 +652,7 @@ export function ConsultationConcierge({
                       <div>
                         <label
                           htmlFor="intro-master-select"
-                          className="block text-[13px] font-medium text-[#18241C] mb-2"
+                          className="block text-[13px] font-medium text-[#51372E] mb-2"
                         >
                           Preferred Teacher
                         </label>
@@ -660,7 +660,7 @@ export function ConsultationConcierge({
                           id="intro-master-select"
                           value={selectedMasterId}
                           onChange={(e) => setSelectedMasterId(e.target.value)}
-                          className="w-full px-4 py-3 text-[14px] text-[#18241C] bg-[#F7FAF6] border border-[#DDE7DC] rounded-full focus:border-[#B84D1D] focus:outline-none"
+                          className="w-full px-4 py-3 text-[14px] text-[#51372E] bg-[#F2EAE5] border border-[#D8CEC4] rounded-full focus:border-[#752D43] focus:outline-none"
                         >
                           {MASTER_TEACHERS.map((m) => (
                             <option key={m.id} value={m.id}>
@@ -675,7 +675,7 @@ export function ConsultationConcierge({
                       <div>
                         <label
                           htmlFor="herway-stage-select"
-                          className="block text-[13px] font-medium text-[#18241C] mb-2"
+                          className="block text-[13px] font-medium text-[#51372E] mb-2"
                         >
                           Postpartum Stage
                         </label>
@@ -683,7 +683,7 @@ export function ConsultationConcierge({
                           id="herway-stage-select"
                           value={herWayStage}
                           onChange={(e) => setHerWayStage(e.target.value)}
-                          className="w-full px-4 py-3 text-[14px] text-[#18241C] bg-[#F7FAF6] border border-[#DDE7DC] rounded-full focus:border-[#B84D1D] focus:outline-none"
+                          className="w-full px-4 py-3 text-[14px] text-[#51372E] bg-[#F2EAE5] border border-[#D8CEC4] rounded-full focus:border-[#752D43] focus:outline-none"
                         >
                           <option value="0–3 Months Postpartum (Gentle Breath & Rest)">
                             0–3 Months Postpartum
@@ -703,7 +703,7 @@ export function ConsultationConcierge({
                       <div>
                         <label
                           htmlFor="herway-teacher-select"
-                          className="block text-[13px] font-medium text-[#18241C] mb-2"
+                          className="block text-[13px] font-medium text-[#51372E] mb-2"
                         >
                           HerWAY Pathway Guide
                         </label>
@@ -711,7 +711,7 @@ export function ConsultationConcierge({
                           id="herway-teacher-select"
                           value={selectedMasterId}
                           onChange={(e) => setSelectedMasterId(e.target.value)}
-                          className="w-full px-4 py-3 text-[14px] text-[#18241C] bg-[#F7FAF6] border border-[#DDE7DC] rounded-full focus:border-[#B84D1D] focus:outline-none"
+                          className="w-full px-4 py-3 text-[14px] text-[#51372E] bg-[#F2EAE5] border border-[#D8CEC4] rounded-full focus:border-[#752D43] focus:outline-none"
                         >
                           {MASTER_TEACHERS.map((m) => (
                             <option key={m.id} value={m.id}>
@@ -726,7 +726,7 @@ export function ConsultationConcierge({
                       <div>
                         <label
                           htmlFor="discipline-select"
-                          className="block text-[13px] font-medium text-[#18241C] mb-2"
+                          className="block text-[13px] font-medium text-[#51372E] mb-2"
                         >
                           Primary Focus
                         </label>
@@ -734,7 +734,7 @@ export function ConsultationConcierge({
                           id="discipline-select"
                           value={selectedDisciplineId}
                           onChange={(e) => setSelectedDisciplineId(e.target.value)}
-                          className="w-full px-4 py-3 text-[14px] text-[#18241C] bg-[#F7FAF6] border border-[#DDE7DC] rounded-full focus:border-[#B84D1D] focus:outline-none"
+                          className="w-full px-4 py-3 text-[14px] text-[#51372E] bg-[#F2EAE5] border border-[#D8CEC4] rounded-full focus:border-[#752D43] focus:outline-none"
                         >
                           {COACHING_DISCIPLINES.map((d) => (
                             <option key={d.id} value={d.id}>
@@ -747,7 +747,7 @@ export function ConsultationConcierge({
                       <div>
                         <label
                           htmlFor="master-select"
-                          className="block text-[13px] font-medium text-[#18241C] mb-2"
+                          className="block text-[13px] font-medium text-[#51372E] mb-2"
                         >
                           Preferred Expert
                         </label>
@@ -755,7 +755,7 @@ export function ConsultationConcierge({
                           id="master-select"
                           value={selectedMasterId}
                           onChange={(e) => setSelectedMasterId(e.target.value)}
-                          className="w-full px-4 py-3 text-[14px] text-[#18241C] bg-[#F7FAF6] border border-[#DDE7DC] rounded-full focus:border-[#B84D1D] focus:outline-none"
+                          className="w-full px-4 py-3 text-[14px] text-[#51372E] bg-[#F2EAE5] border border-[#D8CEC4] rounded-full focus:border-[#752D43] focus:outline-none"
                         >
                           {MASTER_TEACHERS.map((m) => (
                             <option key={m.id} value={m.id}>
@@ -770,7 +770,7 @@ export function ConsultationConcierge({
                       <div>
                         <label
                           htmlFor="business-program-select"
-                          className="block text-[13px] font-medium text-[#18241C] mb-2"
+                          className="block text-[13px] font-medium text-[#51372E] mb-2"
                         >
                           Corporate Programme
                         </label>
@@ -778,7 +778,7 @@ export function ConsultationConcierge({
                           id="business-program-select"
                           value={selectedBusinessProgramId}
                           onChange={(e) => setSelectedBusinessProgramId(e.target.value)}
-                          className="w-full px-4 py-3 text-[14px] text-[#18241C] bg-[#F7FAF6] border border-[#DDE7DC] rounded-full focus:border-[#B84D1D] focus:outline-none"
+                          className="w-full px-4 py-3 text-[14px] text-[#51372E] bg-[#F2EAE5] border border-[#D8CEC4] rounded-full focus:border-[#752D43] focus:outline-none"
                         >
                           {BUSINESS_PROGRAMS.map((bp) => (
                             <option key={bp.id} value={bp.id}>
@@ -791,7 +791,7 @@ export function ConsultationConcierge({
                       <div>
                         <label
                           htmlFor="business-master-select"
-                          className="block text-[13px] font-medium text-[#18241C] mb-2"
+                          className="block text-[13px] font-medium text-[#51372E] mb-2"
                         >
                           Advisory Lead
                         </label>
@@ -799,7 +799,7 @@ export function ConsultationConcierge({
                           id="business-master-select"
                           value={selectedMasterId}
                           onChange={(e) => setSelectedMasterId(e.target.value)}
-                          className="w-full px-4 py-3 text-[14px] text-[#18241C] bg-[#F7FAF6] border border-[#DDE7DC] rounded-full focus:border-[#B84D1D] focus:outline-none"
+                          className="w-full px-4 py-3 text-[14px] text-[#51372E] bg-[#F2EAE5] border border-[#D8CEC4] rounded-full focus:border-[#752D43] focus:outline-none"
                         >
                           {MASTER_TEACHERS.map((m) => (
                             <option key={m.id} value={m.id}>
@@ -814,7 +814,7 @@ export function ConsultationConcierge({
                       <div>
                         <label
                           htmlFor="retreat-select"
-                          className="block text-[13px] font-medium text-[#18241C] mb-2"
+                          className="block text-[13px] font-medium text-[#51372E] mb-2"
                         >
                           Partner Retreat
                         </label>
@@ -827,7 +827,7 @@ export function ConsultationConcierge({
                             const ret = RETREAT_RESIDENCIES.find((r) => r.id === nextId);
                             if (ret) setSelectedSuiteId(ret.suites[0].id);
                           }}
-                          className="w-full px-4 py-3 text-[14px] text-[#18241C] bg-[#F7FAF6] border border-[#DDE7DC] rounded-full focus:border-[#B84D1D] focus:outline-none"
+                          className="w-full px-4 py-3 text-[14px] text-[#51372E] bg-[#F2EAE5] border border-[#D8CEC4] rounded-full focus:border-[#752D43] focus:outline-none"
                         >
                           {RETREAT_RESIDENCIES.map((r) => (
                             <option key={r.id} value={r.id}>
@@ -840,7 +840,7 @@ export function ConsultationConcierge({
                       <div>
                         <label
                           htmlFor="suite-select"
-                          className="block text-[13px] font-medium text-[#18241C] mb-2"
+                          className="block text-[13px] font-medium text-[#51372E] mb-2"
                         >
                           Accommodation Preference
                         </label>
@@ -848,7 +848,7 @@ export function ConsultationConcierge({
                           id="suite-select"
                           value={selectedSuiteId}
                           onChange={(e) => setSelectedSuiteId(e.target.value)}
-                          className="w-full px-4 py-3 text-[14px] text-[#18241C] bg-[#F7FAF6] border border-[#DDE7DC] rounded-full focus:border-[#B84D1D] focus:outline-none"
+                          className="w-full px-4 py-3 text-[14px] text-[#51372E] bg-[#F2EAE5] border border-[#D8CEC4] rounded-full focus:border-[#752D43] focus:outline-none"
                         >
                           {activeRetreat.suites.map((s) => (
                             <option key={s.id} value={s.id}>
@@ -864,7 +864,7 @@ export function ConsultationConcierge({
                     <div>
                       <label
                         htmlFor="client-name"
-                        className="block text-[13px] font-medium text-[#18241C] mb-2"
+                        className="block text-[13px] font-medium text-[#51372E] mb-2"
                       >
                         Full Name
                       </label>
@@ -880,14 +880,14 @@ export function ConsultationConcierge({
                         }}
                         placeholder="Claire Lindholm"
                         aria-invalid={Boolean(errors.clientName)}
-                        className={`w-full px-5 py-3 text-[14px] text-[#18241C] bg-[#F7FAF6] border rounded-full focus:outline-none ${
+                        className={`w-full px-5 py-3 text-[14px] text-[#51372E] bg-[#F2EAE5] border rounded-full focus:outline-none ${
                           errors.clientName
-                            ? 'border-[#9E3B33]'
-                            : 'border-[#DDE7DC] focus:border-[#B84D1D]'
+                            ? 'border-[#752D43]'
+                            : 'border-[#D8CEC4] focus:border-[#752D43]'
                         }`}
                       />
                       {errors.clientName && (
-                        <p className="mt-1.5 flex items-center gap-1.5 text-[12px] text-[#9E3B33]">
+                        <p className="mt-1.5 flex items-center gap-1.5 text-[12px] text-[#752D43]">
                           <AlertCircle className="w-3.5 h-3.5 shrink-0" />
                           <span>{errors.clientName}</span>
                         </p>
@@ -897,7 +897,7 @@ export function ConsultationConcierge({
                     <div>
                       <label
                         htmlFor="client-email"
-                        className="block text-[13px] font-medium text-[#18241C] mb-2"
+                        className="block text-[13px] font-medium text-[#51372E] mb-2"
                       >
                         Email Address
                       </label>
@@ -913,14 +913,14 @@ export function ConsultationConcierge({
                         }}
                         placeholder="claire@studio-europe.eu"
                         aria-invalid={Boolean(errors.clientEmail)}
-                        className={`w-full px-5 py-3 text-[14px] text-[#18241C] bg-[#F7FAF6] border rounded-full focus:outline-none ${
+                        className={`w-full px-5 py-3 text-[14px] text-[#51372E] bg-[#F2EAE5] border rounded-full focus:outline-none ${
                           errors.clientEmail
-                            ? 'border-[#9E3B33]'
-                            : 'border-[#DDE7DC] focus:border-[#B84D1D]'
+                            ? 'border-[#752D43]'
+                            : 'border-[#D8CEC4] focus:border-[#752D43]'
                         }`}
                       />
                       {errors.clientEmail && (
-                        <p className="mt-1.5 flex items-center gap-1.5 text-[12px] text-[#9E3B33]">
+                        <p className="mt-1.5 flex items-center gap-1.5 text-[12px] text-[#752D43]">
                           <AlertCircle className="w-3.5 h-3.5 shrink-0" />
                           <span>{errors.clientEmail}</span>
                         </p>
@@ -931,7 +931,7 @@ export function ConsultationConcierge({
                   <div>
                     <label
                       htmlFor="client-notes"
-                      className="block text-[13px] font-medium text-[#18241C] mb-2"
+                      className="block text-[13px] font-medium text-[#51372E] mb-2"
                     >
                       Wellbeing Goals &amp; Schedule Notes (Optional)
                     </label>
@@ -941,19 +941,19 @@ export function ConsultationConcierge({
                       value={notes}
                       onChange={(e) => setNotes(e.target.value)}
                       placeholder="Share your daily rhythm, preferred Europe or USA hours, team size, or any movement preferences."
-                      className="w-full px-5 py-3.5 text-[14px] text-[#18241C] bg-[#F7FAF6] border border-[#DDE7DC] rounded-[1.5rem] focus:border-[#B84D1D] focus:outline-none resize-none"
+                      className="w-full px-5 py-3.5 text-[14px] text-[#51372E] bg-[#F2EAE5] border border-[#D8CEC4] rounded-[1.5rem] focus:border-[#752D43] focus:outline-none resize-none"
                     />
                   </div>
 
                   <div className="pt-2 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                    <p className="text-[12px] text-[#526458] leading-relaxed max-w-xs">
+                    <p className="text-[12px] text-[#72584D] leading-relaxed max-w-xs">
                       Personal, practical wellbeing guidance. No obligation on free intro calls.
                     </p>
                     <motion.button
                       type="submit"
                       whileHover={{ scale: 1.03, y: -1 }}
                       whileTap={{ scale: 0.98 }}
-                      className="inline-flex items-center justify-center px-8 py-3.5 text-[14px] font-medium text-[#F7FAF6] bg-[#B84D1D] hover:bg-[#963B14] rounded-full ember-card-shadow transition-colors duration-200 whitespace-nowrap shrink-0 cursor-pointer min-h-[48px]"
+                      className="inline-flex items-center justify-center px-8 py-3.5 text-[14px] font-medium text-[#F2EAE5] bg-[#752D43] hover:bg-[#5A1E31] rounded-full ember-card-shadow transition-colors duration-200 whitespace-nowrap shrink-0 cursor-pointer min-h-[48px]"
                     >
                       {getSubmitLabel()}
                     </motion.button>

@@ -180,24 +180,24 @@ export function PracticeMatcher({
     <SectionEntrance id="practice-matcher" className="relative py-20 lg:py-24 overflow-hidden">
       <div className="max-w-6xl mx-auto px-6">
         <RevealOnScroll>
-          <div className="bg-[#EBF3EA] rounded-[2.75rem] border border-[#DDE7DC] soft-card-shadow p-7 sm:p-10 lg:p-12">
+          <div className="bg-[#EAE1DA] rounded-[2.75rem] border border-[#D8CEC4] soft-card-shadow p-7 sm:p-10 lg:p-12">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
               <div className="lg:col-span-4">
-                <p className="text-[14px] font-medium text-[#526458] mb-3">
+                <p className="text-[14px] font-medium text-[#72584D] mb-3">
                   Personalized Practice Advisor
                 </p>
-                <h2 className="text-[34px] md:text-[44px] font-normal leading-[1.1] tracking-[-0.025em] text-[#18241C] mb-4">
+                <h2 className="text-[34px] md:text-[44px] font-normal leading-[1.1] tracking-[-0.025em] text-[#51372E] mb-4">
                   Compose your private{' '}
-                  <span className="font-cursive text-[46px] md:text-[58px] text-[#3E6F4E] font-normal leading-none">
+                  <span className="font-cursive text-[46px] md:text-[58px] text-[#752D43] font-normal leading-none">
                     blueprint.
                   </span>
                 </h2>
-                <p className="text-[15px] leading-[1.7] text-[#526458] mb-8">
+                <p className="text-[15px] leading-[1.7] text-[#72584D] mb-8">
                   Four gentle questions about your intention, travel rhythm, and preferred pace—we
                   match you to a senior master, curriculum, and seasonal retreat.
                 </p>
 
-                <div className="space-y-2.5 pt-5 border-t border-[#18241C]/10">
+                <div className="space-y-2.5 pt-5 border-t border-[#51372E]/10">
                   {STEPS.map((step, idx) => {
                     const isCompleted = Boolean(answers[step.key]);
                     const isCurrent = !blueprint && idx === stepIndex;
@@ -212,10 +212,10 @@ export function PracticeMatcher({
                         disabled={!isCompleted && idx > stepIndex}
                         className={`w-full flex items-center justify-between text-left py-1.5 text-[13px] transition-colors ${
                           isCurrent
-                            ? 'text-[#18241C] font-medium'
+                            ? 'text-[#51372E] font-medium'
                             : isCompleted
-                              ? 'text-[#3E6F4E] cursor-pointer hover:text-[#18241C]'
-                              : 'text-[#526458]/65 cursor-not-allowed'
+                              ? 'text-[#752D43] cursor-pointer hover:text-[#51372E]'
+                              : 'text-[#72584D]/65 cursor-not-allowed'
                         }`}
                       >
                         <span>
@@ -234,7 +234,7 @@ export function PracticeMatcher({
                 </div>
               </div>
 
-              <div className="lg:col-span-8 bg-white rounded-[2.25rem] border border-[#DDE7DC] soft-card-shadow p-7 md:p-9 overflow-hidden">
+              <div className="lg:col-span-8 bg-white rounded-[2.25rem] border border-[#D8CEC4] soft-card-shadow p-7 md:p-9 overflow-hidden">
                 <AnimatePresence mode="wait">
                   {!blueprint ? (
                     <motion.div
@@ -244,11 +244,11 @@ export function PracticeMatcher({
                       exit={{ opacity: 0, y: -10 }}
                       transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
                     >
-                      <div className="flex items-center justify-between gap-4 mb-6 pb-4 border-b border-[#EBF3EA]">
-                        <span className="tabular-nums-mono text-[12px] text-[#526458]">
+                      <div className="flex items-center justify-between gap-4 mb-6 pb-4 border-b border-[#EAE1DA]">
+                        <span className="tabular-nums-mono text-[12px] text-[#72584D]">
                           Step {currentStep.stepNumber} / 04
                         </span>
-                        <div className="w-32 h-1.5 rounded-full bg-[#EBF3EA] overflow-hidden">
+                        <div className="w-32 h-1.5 rounded-full bg-[#EAE1DA] overflow-hidden">
                           <div
                             className="h-full bg-[#4A7C59] rounded-full transition-all duration-300"
                             style={{ width: `${((stepIndex + 1) / STEPS.length) * 100}%` }}
@@ -256,10 +256,10 @@ export function PracticeMatcher({
                         </div>
                       </div>
 
-                      <h3 className="text-[26px] md:text-[30px] font-medium leading-snug text-[#18241C] mb-2">
+                      <h3 className="text-[26px] md:text-[30px] font-medium leading-snug text-[#51372E] mb-2">
                         {currentStep.question}
                       </h3>
-                      <p className="text-[14px] text-[#526458] mb-7">{currentStep.helper}</p>
+                      <p className="text-[14px] text-[#72584D] mb-7">{currentStep.helper}</p>
 
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         {currentStep.options.map((option) => {
@@ -271,8 +271,8 @@ export function PracticeMatcher({
                               onClick={() => handleSelectOption(option.value)}
                               className={`text-left p-5 rounded-[1.5rem] border transition-all duration-200 cursor-pointer flex flex-col justify-between gap-2 min-h-[112px] ${
                                 isSelected
-                                  ? 'border-[#18241C] bg-[#18241C] text-[#F7FAF6]'
-                                  : 'border-[#DDE7DC] bg-[#F7FAF6] hover:bg-[#EBF3EA] hover:border-[#3E6F4E]/40 text-[#18241C]'
+                                  ? 'border-[#51372E] bg-[#51372E] text-[#F2EAE5]'
+                                  : 'border-[#D8CEC4] bg-[#F2EAE5] hover:bg-[#EAE1DA] hover:border-[#752D43]/40 text-[#51372E]'
                               }`}
                             >
                               <span className="text-[15px] font-medium leading-snug">
@@ -280,7 +280,7 @@ export function PracticeMatcher({
                               </span>
                               <span
                                 className={`text-[13px] leading-relaxed ${
-                                  isSelected ? 'text-[#F7FAF6]/80' : 'text-[#526458]'
+                                  isSelected ? 'text-[#F2EAE5]/80' : 'text-[#72584D]'
                                 }`}
                               >
                                 {option.detail}
@@ -290,12 +290,12 @@ export function PracticeMatcher({
                         })}
                       </div>
 
-                      <div className="mt-7 pt-5 border-t border-[#EBF3EA] flex items-center justify-between gap-4">
+                      <div className="mt-7 pt-5 border-t border-[#EAE1DA] flex items-center justify-between gap-4">
                         <button
                           type="button"
                           onClick={() => setStepIndex((prev) => Math.max(0, prev - 1))}
                           disabled={stepIndex === 0}
-                          className="inline-flex items-center gap-2 text-[13px] font-medium text-[#526458] hover:text-[#18241C] disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer py-2"
+                          className="inline-flex items-center gap-2 text-[13px] font-medium text-[#72584D] hover:text-[#51372E] disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer py-2"
                         >
                           <ArrowLeft className="w-4 h-4" />
                           <span>Previous Step</span>
@@ -311,7 +311,7 @@ export function PracticeMatcher({
                                 setBlueprint(computePracticeBlueprint(answers));
                               }
                             }}
-                            className="inline-flex items-center gap-2 px-6 py-2.5 text-[13px] font-medium text-[#F7FAF6] bg-[#18241C] hover:bg-[#24372B] rounded-full transition-colors whitespace-nowrap shrink-0 cursor-pointer"
+                            className="inline-flex items-center gap-2 px-6 py-2.5 text-[13px] font-medium text-[#F2EAE5] bg-[#51372E] hover:bg-[#24372B] rounded-full transition-colors whitespace-nowrap shrink-0 cursor-pointer"
                           >
                             <span>
                               {stepIndex === STEPS.length - 1 ? 'View Blueprint' : 'Continue'}
@@ -329,66 +329,66 @@ export function PracticeMatcher({
                       exit={{ opacity: 0, y: -10 }}
                       transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
                     >
-                      <div className="flex flex-wrap items-center justify-between gap-4 pb-4 mb-6 border-b border-[#EBF3EA]">
-                        <span className="text-[13px] text-[#3E6F4E] font-medium">
+                      <div className="flex flex-wrap items-center justify-between gap-4 pb-4 mb-6 border-b border-[#EAE1DA]">
+                        <span className="text-[13px] text-[#752D43] font-medium">
                           Your Vanvita Practice Blueprint
                         </span>
                         <button
                           type="button"
                           onClick={handleReset}
-                          className="inline-flex items-center gap-1.5 text-[13px] text-[#526458] hover:text-[#18241C] transition-colors cursor-pointer whitespace-nowrap"
+                          className="inline-flex items-center gap-1.5 text-[13px] text-[#72584D] hover:text-[#51372E] transition-colors cursor-pointer whitespace-nowrap"
                         >
                           <RotateCcw className="w-3.5 h-3.5" />
                           <span>Start Over</span>
                         </button>
                       </div>
 
-                      <h3 className="text-[28px] md:text-[34px] font-medium leading-tight text-[#18241C] mb-3">
+                      <h3 className="text-[28px] md:text-[34px] font-medium leading-tight text-[#51372E] mb-3">
                         {blueprint.programTitle}
                       </h3>
-                      <p className="text-[15px] leading-[1.7] text-[#526458] mb-7">
+                      <p className="text-[15px] leading-[1.7] text-[#72584D] mb-7">
                         {blueprint.rationale}
                       </p>
 
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-                        <div className="p-4 rounded-2xl bg-[#F7FAF6] border border-[#DDE7DC]">
-                          <span className="block text-[12px] text-[#526458] mb-1">
+                        <div className="p-4 rounded-2xl bg-[#F2EAE5] border border-[#D8CEC4]">
+                          <span className="block text-[12px] text-[#72584D] mb-1">
                             Recommended Curriculum
                           </span>
-                          <p className="text-[15px] font-medium text-[#18241C]">
+                          <p className="text-[15px] font-medium text-[#51372E]">
                             {matchedDiscipline?.title}
                           </p>
-                          <p className="tabular-nums-mono text-[12px] text-[#526458] mt-1">
+                          <p className="tabular-nums-mono text-[12px] text-[#72584D] mt-1">
                             {matchedDiscipline?.retainerRange} · {blueprint.sessionDuration}
                           </p>
                         </div>
 
-                        <div className="p-4 rounded-2xl bg-[#EBF3EA] border border-[#DDE7DC]">
-                          <span className="block text-[12px] text-[#526458] mb-1">
+                        <div className="p-4 rounded-2xl bg-[#EAE1DA] border border-[#D8CEC4]">
+                          <span className="block text-[12px] text-[#72584D] mb-1">
                             Paired Senior Master
                           </span>
-                          <p className="text-[15px] font-medium text-[#18241C]">
+                          <p className="text-[15px] font-medium text-[#51372E]">
                             {matchedMaster?.name}
                           </p>
-                          <p className="text-[13px] text-[#526458] mt-1">
+                          <p className="text-[13px] text-[#72584D] mt-1">
                             {matchedMaster?.baseCity} · {matchedMaster?.lineage}
                           </p>
                         </div>
 
-                        <div className="p-4 rounded-2xl bg-[#E1ECE0] border border-[#DDE7DC]">
-                          <span className="block text-[12px] text-[#526458] mb-1">
+                        <div className="p-4 rounded-2xl bg-[#E2D7CF] border border-[#D8CEC4]">
+                          <span className="block text-[12px] text-[#72584D] mb-1">
                             Weekly Practice Cadence
                           </span>
-                          <p className="text-[14px] text-[#18241C] leading-relaxed">
+                          <p className="text-[14px] text-[#51372E] leading-relaxed">
                             {blueprint.weeklyCadence}
                           </p>
                         </div>
 
-                        <div className="p-4 rounded-2xl bg-[#F1F6E7] border border-[#DDE7DC]">
-                          <span className="block text-[12px] text-[#526458] mb-1">
+                        <div className="p-4 rounded-2xl bg-[#F9F3EE] border border-[#D8CEC4]">
+                          <span className="block text-[12px] text-[#72584D] mb-1">
                             Breathwork Protocol
                           </span>
-                          <p className="text-[14px] text-[#18241C] leading-relaxed">
+                          <p className="text-[14px] text-[#51372E] leading-relaxed">
                             {blueprint.breathworkProtocol}
                           </p>
                         </div>
@@ -399,10 +399,10 @@ export function PracticeMatcher({
                           <button
                             type="button"
                             onClick={() => onExploreRetreat(matchedRetreat.id)}
-                            className="text-left text-[13px] text-[#526458] hover:text-[#18241C] transition-colors cursor-pointer"
+                            className="text-left text-[13px] text-[#72584D] hover:text-[#51372E] transition-colors cursor-pointer"
                           >
                             <span className="block text-[12px]">Complementary Residency</span>
-                            <span className="underline underline-offset-4 text-[#18241C] font-medium">
+                            <span className="underline underline-offset-4 text-[#51372E] font-medium">
                               {matchedRetreat.title} ({matchedRetreat.dates})
                             </span>
                           </button>
@@ -411,7 +411,7 @@ export function PracticeMatcher({
                         <button
                           type="button"
                           onClick={() => onApplyBlueprint(blueprint)}
-                          className="inline-flex items-center gap-2 px-7 py-3.5 text-[14px] font-medium text-[#18241C] bg-[#B7D7BD] hover:bg-[#A3CBA9] hover:scale-[1.02] rounded-full soft-card-shadow transition-all whitespace-nowrap shrink-0 cursor-pointer min-h-[44px]"
+                          className="inline-flex items-center gap-2 px-7 py-3.5 text-[14px] font-medium text-[#51372E] bg-[#C4B6A6] hover:bg-[#C4B6A6] hover:scale-[1.02] rounded-full soft-card-shadow transition-all whitespace-nowrap shrink-0 cursor-pointer min-h-[44px]"
                         >
                           <span>Schedule This Blueprint</span>
                           <ArrowRight className="w-4 h-4" />

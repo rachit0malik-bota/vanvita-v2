@@ -57,9 +57,9 @@ export function BusinessSection({
   }, [teamSizeId, contractId, addonId]);
 
   const getTintBg = (tint: 'eucalyptus' | 'fern' | 'sunbeam') => {
-    if (tint === 'eucalyptus') return 'bg-[#EBF3EA]';
-    if (tint === 'fern') return 'bg-[#F8EDE6]';
-    return 'bg-[#F1F6E7]';
+    if (tint === 'eucalyptus') return 'bg-[#EAE1DA]';
+    if (tint === 'fern') return 'bg-[#FBF0F2]';
+    return 'bg-[#F9F3EE]';
   };
 
   return (
@@ -71,23 +71,23 @@ export function BusinessSection({
       {/* Faded dark burnt-orange & morning botanical ambient blobs */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -top-12 left-0 w-[460px] h-[460px] rounded-full bg-[#B84D1D]/12 blur-[110px] animate-blob-slow"
+        className="pointer-events-none absolute -top-12 left-0 w-[460px] h-[460px] rounded-full bg-[#752D43]/12 blur-[110px] animate-blob-slow"
       />
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute bottom-10 right-0 w-[440px] h-[440px] rounded-full bg-[#D7ECD9]/75 blur-[105px] animate-blob-slow-reverse"
+        className="pointer-events-none absolute bottom-10 right-0 w-[440px] h-[440px] rounded-full bg-[#F5EAE8]/75 blur-[105px] animate-blob-slow-reverse"
       />
 
       <div className="relative z-10 max-w-6xl mx-auto px-6">
         <RevealOnScroll>
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12">
             <div className="max-w-2xl">
-              <p className="text-[13.5px] font-medium text-[#963B14] mb-3">
+              <p className="text-[13.5px] font-medium text-[#5A1E31] mb-3">
                 Corporate Burnout &amp; Retreat · For Business
               </p>
-              <h2 className="text-[38px] md:text-[54px] font-normal leading-[1.06] tracking-[-0.025em] text-[#18241C]">
+              <h2 className="text-[38px] md:text-[54px] font-normal leading-[1.06] tracking-[-0.025em] text-[#51372E]">
                 Sustained focus and calmer teams across every{' '}
-                <span className="font-cursive text-[52px] md:text-[70px] text-[#B84D1D] font-normal leading-none">
+                <span className="font-cursive text-[52px] md:text-[70px] text-[#752D43] font-normal leading-none">
                   quarter.
                 </span>
               </h2>
@@ -99,13 +99,13 @@ export function BusinessSection({
                 whileHover={{ y: -2, scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 onClick={onExploreFullBusiness}
-                className="inline-flex items-center gap-2 px-6 py-3 text-[14px] font-medium text-[#18241C] bg-[#F8EDE6] hover:bg-[#F2DFD3] border border-[#B84D1D]/25 rounded-full soft-card-shadow transition-colors whitespace-nowrap shrink-0 self-start lg:self-auto cursor-pointer min-h-[44px]"
+                className="inline-flex items-center gap-2 px-6 py-3 text-[14px] font-medium text-[#51372E] bg-[#FBF0F2] hover:bg-[#F5EAE8] border border-[#752D43]/25 rounded-full soft-card-shadow transition-colors whitespace-nowrap shrink-0 self-start lg:self-auto cursor-pointer min-h-[44px]"
               >
                 <span>Explore Corporate &amp; India Retreats</span>
-                <ArrowRight className="w-4 h-4 text-[#B84D1D]" />
+                <ArrowRight className="w-4 h-4 text-[#752D43]" />
               </motion.button>
             ) : (
-              <p className="text-[15.5px] leading-[1.68] text-[#3F5246] max-w-md">
+              <p className="text-[15.5px] leading-[1.68] text-[#634B41] max-w-md">
                 Start with a focused paid burnout-prevention pilot, expand into quarterly or annual
                 contracts and interactive workshops, or host leadership retreats in India through
                 our licensed partners.
@@ -116,7 +116,7 @@ export function BusinessSection({
 
         {/* Full-Width Living India Retreat Sunrise Courtyard Cinema Banner */}
         <RevealOnScroll delay={0.08} className="mb-12">
-          <div className="relative rounded-[2.5rem] overflow-hidden border border-[#DDE7DC] soft-card-shadow bg-[#18241C] h-[340px] sm:h-[440px]">
+          <div className="relative rounded-[2.5rem] overflow-hidden border border-[#D8CEC4] soft-card-shadow bg-[#51372E] h-[340px] sm:h-[440px]">
             <video
               src={INDIA_RETREAT_VIDEO}
               poster={INDIA_RETREAT_IMAGE}
@@ -133,20 +133,20 @@ export function BusinessSection({
               className="pointer-events-none absolute inset-0"
               style={{
                 background:
-                  'linear-gradient(180deg, rgba(20,31,24,0.22) 0%, rgba(20,31,24,0.34) 48%, rgba(16,25,19,0.92) 100%)',
+                  'linear-gradient(180deg, rgba(50,32,25,0.22) 0%, rgba(50,32,25,0.34) 48%, rgba(40,24,19,0.92) 100%)',
               }}
             />
-            <div className="absolute bottom-7 left-7 right-7 flex flex-col md:flex-row md:items-end justify-between gap-4 text-[#F7FAF6]">
+            <div className="absolute bottom-7 left-7 right-7 flex flex-col md:flex-row md:items-end justify-between gap-4 text-[#F2EAE5]">
               <div className="max-w-xl">
-                <p className="text-[13px] font-medium text-[#F0AE89] mb-2">
+                <p className="text-[13px] font-medium text-[#E8899D] mb-2">
                   Paid Pilot · Quarterly &amp; Annual Contracts · Licensed Partners in India
                 </p>
-                <p className="text-[22px] sm:text-[28px] font-medium leading-snug text-[#F7FAF6]">
+                <p className="text-[22px] sm:text-[28px] font-medium leading-snug text-[#F2EAE5]">
                   Live Europe &amp; USA burnout-prevention programmes paired with authentic
                   leadership retreats in India.
                 </p>
               </div>
-              <div className="text-[13px] font-medium text-[#F7FAF6] whitespace-nowrap shrink-0 bg-[#18241C]/70 backdrop-blur-md px-4 py-2 rounded-full border border-white/20">
+              <div className="text-[13px] font-medium text-[#F2EAE5] whitespace-nowrap shrink-0 bg-[#51372E]/70 backdrop-blur-md px-4 py-2 rounded-full border border-white/20">
                 Europe · USA · India Retreats
               </div>
             </div>
@@ -160,28 +160,28 @@ export function BusinessSection({
               <motion.article
                 whileHover={{ scale: 1.028, y: -6 }}
                 transition={{ type: 'spring', stiffness: 260, damping: 22 }}
-                className="h-full bg-white rounded-[2.25rem] border border-[#DDE7DC] hover:border-[#B84D1D]/40 soft-card-shadow hover:ember-card-shadow p-7 flex flex-col justify-between gap-6 transition-[border-color,box-shadow] duration-300"
+                className="h-full bg-white rounded-[2.25rem] border border-[#D8CEC4] hover:border-[#752D43]/40 soft-card-shadow hover:ember-card-shadow p-7 flex flex-col justify-between gap-6 transition-[border-color,box-shadow] duration-300"
               >
                 <div>
-                  <div className="flex items-center justify-between gap-2 text-[12px] text-[#526458] mb-3">
-                    <span className="tabular-nums-mono text-[#B84D1D] font-medium">
+                  <div className="flex items-center justify-between gap-2 text-[12px] text-[#72584D] mb-3">
+                    <span className="tabular-nums-mono text-[#752D43] font-medium">
                       {program.index}.
                     </span>
                     <span>{program.cadence}</span>
                   </div>
 
-                  <h3 className="text-[23px] font-medium leading-snug text-[#18241C] mb-2">
+                  <h3 className="text-[23px] font-medium leading-snug text-[#51372E] mb-2">
                     {program.title}
                   </h3>
-                  <p className="text-[13px] text-[#3E6F4E] mb-4">{program.subtitle}</p>
-                  <p className="text-[14px] leading-[1.65] text-[#526458] mb-5">
+                  <p className="text-[13px] text-[#752D43] mb-4">{program.subtitle}</p>
+                  <p className="text-[14px] leading-[1.65] text-[#72584D] mb-5">
                     {program.summary}
                   </p>
 
-                  <ul className="space-y-2.5 text-[13px] text-[#18241C] pt-4 border-t border-[#EBF3EA]">
+                  <ul className="space-y-2.5 text-[13px] text-[#51372E] pt-4 border-t border-[#EAE1DA]">
                     {program.deliverables.map((item) => (
                       <li key={item} className="flex items-start gap-2.5">
-                        <Check className="w-4 h-4 text-[#B84D1D] shrink-0 mt-0.5" />
+                        <Check className="w-4 h-4 text-[#752D43] shrink-0 mt-0.5" />
                         <span className="leading-snug">{item}</span>
                       </li>
                     ))}
@@ -189,11 +189,11 @@ export function BusinessSection({
                 </div>
 
                 <div className={`p-4 rounded-[1.5rem] space-y-3 ${getTintBg(program.tint)}`}>
-                  <p className="text-[12px] text-[#526458] leading-snug">
+                  <p className="text-[12px] text-[#72584D] leading-snug">
                     {program.outcomeMetric}
                   </p>
-                  <div className="flex items-center justify-between gap-3 pt-2 border-t border-[#18241C]/8">
-                    <span className="tabular-nums-mono text-[12.5px] font-medium text-[#18241C]">
+                  <div className="flex items-center justify-between gap-3 pt-2 border-t border-[#51372E]/8">
+                    <span className="tabular-nums-mono text-[12.5px] font-medium text-[#51372E]">
                       {program.startingRate}
                     </span>
                     <button
@@ -204,7 +204,7 @@ export function BusinessSection({
                           `Corporate Inquiry: ${program.title} (${program.startingRate}). ${program.subtitle}.`
                         )
                       }
-                      className="text-[13px] font-medium text-[#B84D1D] hover:text-[#963B14] transition-colors cursor-pointer whitespace-nowrap"
+                      className="text-[13px] font-medium text-[#752D43] hover:text-[#5A1E31] transition-colors cursor-pointer whitespace-nowrap"
                     >
                       Request Brief →
                     </button>
@@ -218,17 +218,17 @@ export function BusinessSection({
         {/* Interactive Corporate Programme Estimator (Full Business Page) */}
         {!previewMode && (
           <RevealOnScroll delay={0.1}>
-            <div className="bg-[#EBF3EA] rounded-[2.75rem] border border-[#DDE7DC] soft-card-shadow p-7 sm:p-10 lg:p-12">
+            <div className="bg-[#EAE1DA] rounded-[2.75rem] border border-[#D8CEC4] soft-card-shadow p-7 sm:p-10 lg:p-12">
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
                 <div className="lg:col-span-7 space-y-6">
                   <div>
-                    <p className="text-[13px] font-medium text-[#B84D1D] mb-2">
+                    <p className="text-[13px] font-medium text-[#752D43] mb-2">
                       Corporate Programme Estimator
                     </p>
-                    <h3 className="text-[30px] md:text-[38px] font-normal leading-tight text-[#18241C] mb-2">
+                    <h3 className="text-[30px] md:text-[38px] font-normal leading-tight text-[#51372E] mb-2">
                       Scope a paid burnout pilot or India retreat.
                     </h3>
-                    <p className="text-[14px] text-[#526458]">
+                    <p className="text-[14px] text-[#72584D]">
                       Choose your team size, contract structure, and optional workshops or licensed
                       India retreat to preview an indicative corporate brief.
                     </p>
@@ -236,7 +236,7 @@ export function BusinessSection({
 
                   {/* Team Size */}
                   <div>
-                    <span className="block text-[13px] font-medium text-[#18241C] mb-2.5">
+                    <span className="block text-[13px] font-medium text-[#51372E] mb-2.5">
                       01. Team Size
                     </span>
                     <div className="flex flex-wrap gap-2">
@@ -249,8 +249,8 @@ export function BusinessSection({
                             onClick={() => setTeamSizeId(size.id)}
                             className={`px-4 py-2.5 text-[13px] font-medium rounded-full border transition-all cursor-pointer whitespace-nowrap ${
                               isSelected
-                                ? 'bg-[#18241C] border-[#18241C] text-[#F7FAF6]'
-                                : 'bg-white border-[#DDE7DC] text-[#526458] hover:text-[#18241C]'
+                                ? 'bg-[#51372E] border-[#51372E] text-[#F2EAE5]'
+                                : 'bg-white border-[#D8CEC4] text-[#72584D] hover:text-[#51372E]'
                             }`}
                           >
                             {size.label}
@@ -262,7 +262,7 @@ export function BusinessSection({
 
                   {/* Engagement Model */}
                   <div>
-                    <span className="block text-[13px] font-medium text-[#18241C] mb-2.5">
+                    <span className="block text-[13px] font-medium text-[#51372E] mb-2.5">
                       02. Engagement Structure
                     </span>
                     <div className="flex flex-wrap gap-2">
@@ -275,8 +275,8 @@ export function BusinessSection({
                             onClick={() => setContractId(model.id)}
                             className={`px-4 py-2.5 text-[13px] font-medium rounded-full border transition-all cursor-pointer whitespace-nowrap ${
                               isSelected
-                                ? 'bg-[#B84D1D] border-[#B84D1D] text-[#F7FAF6]'
-                                : 'bg-white border-[#DDE7DC] text-[#526458] hover:text-[#18241C]'
+                                ? 'bg-[#752D43] border-[#752D43] text-[#F2EAE5]'
+                                : 'bg-white border-[#D8CEC4] text-[#72584D] hover:text-[#51372E]'
                             }`}
                           >
                             {model.label}
@@ -288,7 +288,7 @@ export function BusinessSection({
 
                   {/* Delivery & Retreats */}
                   <div>
-                    <span className="block text-[13px] font-medium text-[#18241C] mb-2.5">
+                    <span className="block text-[13px] font-medium text-[#51372E] mb-2.5">
                       03. Delivery & Retreats
                     </span>
                     <div className="flex flex-wrap gap-2">
@@ -301,8 +301,8 @@ export function BusinessSection({
                             onClick={() => setAddonId(addon.id)}
                             className={`px-4 py-2.5 text-[13px] font-medium rounded-full border transition-all cursor-pointer whitespace-nowrap ${
                               isSelected
-                                ? 'bg-[#18241C] border-[#18241C] text-[#F7FAF6]'
-                                : 'bg-white border-[#DDE7DC] text-[#526458] hover:text-[#18241C]'
+                                ? 'bg-[#51372E] border-[#51372E] text-[#F2EAE5]'
+                                : 'bg-white border-[#D8CEC4] text-[#72584D] hover:text-[#51372E]'
                             }`}
                           >
                             {addon.label}
@@ -314,46 +314,46 @@ export function BusinessSection({
                 </div>
 
                 {/* Live Indicative Summary Card */}
-                <div className="lg:col-span-5 bg-white rounded-[2.25rem] border border-[#DDE7DC] soft-card-shadow p-7 space-y-6">
+                <div className="lg:col-span-5 bg-white rounded-[2.25rem] border border-[#D8CEC4] soft-card-shadow p-7 space-y-6">
                   <div className="flex items-center gap-3">
-                    <span className="w-10 h-10 rounded-2xl bg-[#F8EDE6] text-[#B84D1D] flex items-center justify-center shrink-0">
+                    <span className="w-10 h-10 rounded-2xl bg-[#FBF0F2] text-[#752D43] flex items-center justify-center shrink-0">
                       <Building2 className="w-5 h-5" />
                     </span>
                     <div>
-                      <p className="text-[12px] text-[#526458]">Indicative Scope</p>
-                      <p className="text-[16px] font-medium text-[#18241C]">
+                      <p className="text-[12px] text-[#72584D]">Indicative Scope</p>
+                      <p className="text-[16px] font-medium text-[#51372E]">
                         VANVITA Corporate Wellbeing
                       </p>
                     </div>
                   </div>
 
-                  <div className="py-5 border-y border-[#EBF3EA]">
-                    <p className="text-[12px] text-[#526458] mb-1">Indicative Investment</p>
+                  <div className="py-5 border-y border-[#EAE1DA]">
+                    <p className="text-[12px] text-[#72584D] mb-1">Indicative Investment</p>
                     <motion.p
                       key={`${estimate.amount}-${estimate.unit}`}
                       initial={{ opacity: 0.4, y: 6 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.25 }}
-                      className="tabular-nums-mono text-[34px] font-medium text-[#18241C] leading-none"
+                      className="tabular-nums-mono text-[34px] font-medium text-[#51372E] leading-none"
                     >
                       ${estimate.amount.toLocaleString()}
-                      <span className="text-[14px] font-normal text-[#526458] ml-1.5">
+                      <span className="text-[14px] font-normal text-[#72584D] ml-1.5">
                         {estimate.unit}
                       </span>
                     </motion.p>
                   </div>
 
-                  <div className="space-y-2 text-[13px] text-[#526458]">
+                  <div className="space-y-2 text-[13px] text-[#72584D]">
                     <p>
-                      Cohort: <span className="text-[#18241C] font-medium">{estimate.teamLabel}</span>
+                      Cohort: <span className="text-[#51372E] font-medium">{estimate.teamLabel}</span>
                     </p>
                     <p>
                       Structure:{' '}
-                      <span className="text-[#18241C] font-medium">{estimate.contractLabel}</span>
+                      <span className="text-[#51372E] font-medium">{estimate.contractLabel}</span>
                     </p>
                     <p>
                       Scope:{' '}
-                      <span className="text-[#18241C] font-medium">{estimate.addonLabel}</span>
+                      <span className="text-[#51372E] font-medium">{estimate.addonLabel}</span>
                     </p>
                     <p>
                       Includes live Europe & USA timezone scheduling, recorded library access, and
@@ -371,7 +371,7 @@ export function BusinessSection({
                         `Corporate Brief — Team: ${estimate.teamLabel} · Structure: ${estimate.contractLabel} · Scope: ${estimate.addonLabel} · Indicative: $${estimate.amount.toLocaleString()} ${estimate.unit}.`
                       )
                     }
-                    className="w-full inline-flex items-center justify-center gap-2 py-3.5 px-6 text-[14px] font-medium text-[#F7FAF6] bg-[#B84D1D] hover:bg-[#963B14] rounded-full ember-card-shadow transition-colors cursor-pointer min-h-[46px]"
+                    className="w-full inline-flex items-center justify-center gap-2 py-3.5 px-6 text-[14px] font-medium text-[#F2EAE5] bg-[#752D43] hover:bg-[#5A1E31] rounded-full ember-card-shadow transition-colors cursor-pointer min-h-[46px]"
                   >
                     <span>Request Corporate Proposal</span>
                     <ArrowRight className="w-4 h-4" />

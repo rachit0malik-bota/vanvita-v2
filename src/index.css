@@ -5,33 +5,54 @@
   --font-cursive: "Reenie Beanie", cursive;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
 
-  --color-morning-dew: #F7FAF6;
-  --color-eucalyptus: #EBF3EA;
-  --color-fern-mist: #E1ECE0;
-  --color-sunbeam: #F1F6E7;
-  --color-celadon: #B7D7BD;
-  --color-botanical: #3E6F4E;
-  --color-pine: #18241C;
-  --color-moss: #3F5246;
-  --color-hairline: #DDE7DC;
+  /* Primary Brand Theme: Burgundy & Rose (Elegant · Boutique · Luxurious) */
+  --color-warm-sand: #F2EAE5;
+  --color-sand-light: #FBF8F5;
+  --color-sand-surface: #FAF6F3;
+  --color-taupe: #C4B6A6;
+  --color-taupe-light: #E8E0D7;
+  --color-taupe-hairline: #D8CEC4;
+  --color-chocolate: #51372E;
+  --color-chocolate-deep: #3A251E;
+  --color-chocolate-muted: #72584D;
+  --color-burgundy: #752D43;
+  --color-burgundy-deep: #5A1E31;
+  --color-burgundy-light: #943B55;
+  --color-primary-rose: #DC7188;
+  --color-rose-warm: #E8899D;
+  --color-rose-petal: #F5CBD3;
+  --color-rose-wash: #FBF0F2;
 
-  /* Faded Dark Burnt-Orange Contrast Accents */
-  --color-ember: #B84D1D;
-  --color-ember-deep: #963B14;
-  --color-ember-warm: #D97A4A;
-  --color-ember-wash: #F8EDE6;
+  /* Backward Compatibility Semantic Palette Variables */
+  --color-morning-dew: #F2EAE5;
+  --color-eucalyptus: #EAE1DA;
+  --color-fern-mist: #E2D7CF;
+  --color-sunbeam: #F8F1EB;
+  --color-celadon: #C4B6A6;
+  --color-botanical: #752D43;
+  --color-pine: #51372E;
+  --color-moss: #72584D;
+  --color-hairline: #D8CEC4;
+
+  /* Accent Mappings: Burgundy & Rose */
+  --color-ember: #752D43;
+  --color-ember-deep: #5A1E31;
+  --color-ember-warm: #DC7188;
+  --color-ember-wash: #FBF0F2;
 }
 
 @layer base {
   html {
     font-family: var(--font-sans);
-    background-color: var(--color-morning-dew);
-    color: var(--color-pine);
+    background-color: var(--color-warm-sand);
+    color: var(--color-chocolate);
     scroll-padding-top: 6.5rem;
     overflow-x: clip;
   }
 
   body {
+    background-color: var(--color-warm-sand);
+    color: var(--color-chocolate);
     overflow-x: clip;
   }
 
@@ -42,6 +63,7 @@
     font-family: var(--font-sans);
     letter-spacing: -0.025em;
     text-wrap: balance;
+    color: var(--color-chocolate);
   }
 
   button,
@@ -49,7 +71,7 @@
   input,
   select,
   textarea {
-    outline-color: #B84D1D;
+    outline-color: #752D43;
   }
 }
 
@@ -63,11 +85,15 @@
 }
 
 .soft-card-shadow {
-  box-shadow: 0 6px 26px -4px rgba(24, 36, 28, 0.07);
+  box-shadow: 0 6px 26px -4px rgba(81, 55, 46, 0.08);
 }
 
 .ember-card-shadow {
-  box-shadow: 0 10px 30px -6px rgba(184, 77, 29, 0.14), 0 4px 16px -4px rgba(24, 36, 28, 0.06);
+  box-shadow: 0 10px 30px -6px rgba(117, 45, 67, 0.18), 0 4px 16px -4px rgba(81, 55, 46, 0.06);
+}
+
+.rose-glow {
+  box-shadow: 0 0 25px -4px rgba(220, 113, 136, 0.35);
 }
 
 @keyframes floatSlow {
@@ -101,13 +127,13 @@
 
 @keyframes emberPing {
   0% {
-    box-shadow: 0 0 0 0 rgba(196, 91, 40, 0.55);
+    box-shadow: 0 0 0 0 rgba(117, 45, 67, 0.55);
   }
   70% {
-    box-shadow: 0 0 0 15px rgba(196, 91, 40, 0);
+    box-shadow: 0 0 0 15px rgba(117, 45, 67, 0);
   }
   100% {
-    box-shadow: 0 0 0 0 rgba(196, 91, 40, 0);
+    box-shadow: 0 0 0 0 rgba(117, 45, 67, 0);
   }
 }
 
@@ -155,4 +181,3 @@
     transition-duration: 0.01ms !important;
   }
 }
-

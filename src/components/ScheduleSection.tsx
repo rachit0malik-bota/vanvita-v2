@@ -50,29 +50,29 @@ export function ScheduleSection({ onBookClass }: ScheduleSectionProps) {
     >
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -top-10 left-1/4 w-[440px] h-[440px] rounded-full bg-[#B84D1D]/10 blur-[110px] animate-blob-slow"
+        className="pointer-events-none absolute -top-10 left-1/4 w-[440px] h-[440px] rounded-full bg-[#752D43]/10 blur-[110px] animate-blob-slow"
       />
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute bottom-0 right-0 w-[440px] h-[440px] rounded-full bg-[#D7ECD9]/75 blur-[105px] animate-blob-slow-reverse"
+        className="pointer-events-none absolute bottom-0 right-0 w-[440px] h-[440px] rounded-full bg-[#F5EAE8]/75 blur-[105px] animate-blob-slow-reverse"
       />
 
       <div className="relative z-10 max-w-6xl mx-auto px-6">
         <RevealOnScroll>
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10">
             <div className="max-w-2xl">
-              <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#F8EDE6] border border-[#B84D1D]/20 text-[#B84D1D] tabular-nums-mono text-[10.5px] uppercase tracking-[0.15em] mb-4">
+              <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#FBF0F2] border border-[#752D43]/20 text-[#752D43] tabular-nums-mono text-[10.5px] uppercase tracking-[0.15em] mb-4">
                 Live Online Schedule · Europe & USA
               </span>
-              <h1 className="text-[38px] md:text-[54px] font-normal leading-[1.06] tracking-[-0.025em] text-[#18241C]">
+              <h1 className="text-[38px] md:text-[54px] font-normal leading-[1.06] tracking-[-0.025em] text-[#51372E]">
                 Sessions timed effortlessly for your{' '}
-                <span className="font-cursive text-[52px] md:text-[70px] text-[#B84D1D] font-normal leading-none">
+                <span className="font-cursive text-[52px] md:text-[70px] text-[#752D43] font-normal leading-none">
                   day.
                 </span>
               </h1>
             </div>
 
-            <p className="text-[15px] leading-[1.68] text-[#526458] max-w-md">
+            <p className="text-[15px] leading-[1.68] text-[#72584D] max-w-md">
               Switch between European and US time zones below to view live group yoga, meditation,
               breathwork, and supervised HerWAY pilot sessions in your local clock.
             </p>
@@ -81,10 +81,10 @@ export function ScheduleSection({ onBookClass }: ScheduleSectionProps) {
 
         {/* Timezone & Modality Controls */}
         <RevealOnScroll delay={0.08}>
-          <div className="bg-white rounded-[2rem] border border-[#DDE7DC] soft-card-shadow p-5 sm:p-6 mb-8 flex flex-col lg:flex-row lg:items-center justify-between gap-5">
+          <div className="bg-white rounded-[2rem] border border-[#D8CEC4] soft-card-shadow p-5 sm:p-6 mb-8 flex flex-col lg:flex-row lg:items-center justify-between gap-5">
             <div>
-              <p className="text-[12px] font-medium text-[#526458] flex items-center gap-1.5 mb-2.5">
-                <Globe className="w-3.5 h-3.5 text-[#B84D1D]" />
+              <p className="text-[12px] font-medium text-[#72584D] flex items-center gap-1.5 mb-2.5">
+                <Globe className="w-3.5 h-3.5 text-[#752D43]" />
                 <span>View Times In:</span>
               </p>
               <div className="flex flex-wrap gap-2">
@@ -97,8 +97,8 @@ export function ScheduleSection({ onBookClass }: ScheduleSectionProps) {
                       onClick={() => setSelectedTz(tz)}
                       className={`px-3.5 py-2 text-[12.5px] font-medium rounded-full border transition-colors cursor-pointer whitespace-nowrap ${
                         isActive
-                          ? 'bg-[#18241C] border-[#18241C] text-[#F7FAF6]'
-                          : 'bg-[#F7FAF6] border-[#DDE7DC] text-[#526458] hover:text-[#18241C]'
+                          ? 'bg-[#51372E] border-[#51372E] text-[#F2EAE5]'
+                          : 'bg-[#F2EAE5] border-[#D8CEC4] text-[#72584D] hover:text-[#51372E]'
                       }`}
                     >
                       {tz.city}
@@ -108,9 +108,9 @@ export function ScheduleSection({ onBookClass }: ScheduleSectionProps) {
               </div>
             </div>
 
-            <div className="lg:border-l lg:border-[#EBF3EA] lg:pl-6">
-              <p className="text-[12px] font-medium text-[#526458] mb-2.5">Filter Modality:</p>
-              <div className="inline-flex flex-wrap gap-1.5 p-1 bg-[#EBF3EA] rounded-full">
+            <div className="lg:border-l lg:border-[#EAE1DA] lg:pl-6">
+              <p className="text-[12px] font-medium text-[#72584D] mb-2.5">Filter Modality:</p>
+              <div className="inline-flex flex-wrap gap-1.5 p-1 bg-[#EAE1DA] rounded-full">
                 {MODALITIES.map((mod) => {
                   const isActive = mod === modalityFilter;
                   return (
@@ -119,14 +119,14 @@ export function ScheduleSection({ onBookClass }: ScheduleSectionProps) {
                       type="button"
                       onClick={() => setModalityFilter(mod)}
                       className={`relative px-3.5 py-1.5 text-[12px] font-medium rounded-full transition-colors cursor-pointer whitespace-nowrap ${
-                        isActive ? 'text-[#F7FAF6]' : 'text-[#526458] hover:text-[#18241C]'
+                        isActive ? 'text-[#F2EAE5]' : 'text-[#72584D] hover:text-[#51372E]'
                       }`}
                     >
                       {isActive && (
                         <motion.span
                           layoutId="scheduleModalityPill"
                           transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
-                          className="absolute inset-0 bg-[#B84D1D] rounded-full"
+                          className="absolute inset-0 bg-[#752D43] rounded-full"
                         />
                       )}
                       <span className="relative z-10">{mod}</span>
@@ -148,19 +148,19 @@ export function ScheduleSection({ onBookClass }: ScheduleSectionProps) {
                 <motion.article
                   whileHover={{ scale: 1.015, y: -3 }}
                   transition={{ duration: 0.26, ease: [0.22, 1, 0.36, 1] }}
-                  className="bg-white rounded-[1.75rem] border border-[#DDE7DC] hover:border-[#B84D1D]/40 soft-card-shadow p-6 flex flex-col md:flex-row md:items-center justify-between gap-5 transition-colors"
+                  className="bg-white rounded-[1.75rem] border border-[#D8CEC4] hover:border-[#752D43]/40 soft-card-shadow p-6 flex flex-col md:flex-row md:items-center justify-between gap-5 transition-colors"
                 >
                   <div className="flex flex-col sm:flex-row sm:items-center gap-5">
                     <div
                       className={`px-4 py-3 rounded-2xl min-w-[155px] shrink-0 ${
-                        isHerWay ? 'bg-[#F8EDE6]' : 'bg-[#EBF3EA]'
+                        isHerWay ? 'bg-[#FBF0F2]' : 'bg-[#EAE1DA]'
                       }`}
                     >
-                      <p className="tabular-nums-mono text-[11px] uppercase tracking-[0.12em] text-[#526458]">
+                      <p className="tabular-nums-mono text-[11px] uppercase tracking-[0.12em] text-[#72584D]">
                         {cls.dayOfWeek} · {cls.durationMinutes} min
                       </p>
-                      <p className="tabular-nums-mono text-[16px] font-medium text-[#18241C] mt-0.5 flex items-center gap-1.5">
-                        <Clock className="w-3.5 h-3.5 text-[#B84D1D] shrink-0" />
+                      <p className="tabular-nums-mono text-[16px] font-medium text-[#51372E] mt-0.5 flex items-center gap-1.5">
+                        <Clock className="w-3.5 h-3.5 text-[#752D43] shrink-0" />
                         <span>{localTime}</span>
                       </p>
                     </div>
@@ -170,24 +170,24 @@ export function ScheduleSection({ onBookClass }: ScheduleSectionProps) {
                         <span
                           className={`px-2.5 py-0.5 rounded-full font-medium ${
                             isHerWay
-                              ? 'bg-[#F8EDE6] text-[#B84D1D]'
-                              : 'bg-[#EBF3EA] text-[#3E6F4E]'
+                              ? 'bg-[#FBF0F2] text-[#752D43]'
+                              : 'bg-[#EAE1DA] text-[#752D43]'
                           }`}
                         >
                           {cls.modality}
                         </span>
-                        <span className="text-[#526458]">{cls.windowLabel}</span>
-                        <span aria-hidden="true" className="text-[#DDE7DC]">
+                        <span className="text-[#72584D]">{cls.windowLabel}</span>
+                        <span aria-hidden="true" className="text-[#D8CEC4]">
                           ·
                         </span>
-                        <span className="text-[#526458]">{cls.level}</span>
+                        <span className="text-[#72584D]">{cls.level}</span>
                       </div>
 
-                      <h2 className="text-[20px] font-medium text-[#18241C] leading-snug">
+                      <h2 className="text-[20px] font-medium text-[#51372E] leading-snug">
                         {cls.title}
                       </h2>
-                      <p className="text-[13px] text-[#526458] mt-0.5">
-                        Guided live by <span className="text-[#18241C]">{cls.expertName}</span>
+                      <p className="text-[13px] text-[#72584D] mt-0.5">
+                        Guided live by <span className="text-[#51372E]">{cls.expertName}</span>
                       </p>
                     </div>
                   </div>
@@ -197,7 +197,7 @@ export function ScheduleSection({ onBookClass }: ScheduleSectionProps) {
                     whileHover={{ scale: 1.03 }}
                     whileTap={{ scale: 0.97 }}
                     onClick={() => onBookClass(cls, `${localTime} (${selectedTz.city})`)}
-                    className="inline-flex items-center justify-center gap-2 px-5 py-3 text-[13px] font-medium text-[#F7FAF6] bg-[#18241C] hover:bg-[#B84D1D] rounded-full transition-colors whitespace-nowrap shrink-0 cursor-pointer min-h-[44px]"
+                    className="inline-flex items-center justify-center gap-2 px-5 py-3 text-[13px] font-medium text-[#F2EAE5] bg-[#51372E] hover:bg-[#752D43] rounded-full transition-colors whitespace-nowrap shrink-0 cursor-pointer min-h-[44px]"
                   >
                     <span>Reserve Free Intro</span>
                     <ArrowRight className="w-3.5 h-3.5" />

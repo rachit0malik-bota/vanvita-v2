@@ -67,11 +67,11 @@ export function YogaServicesOverview({
       {/* Faded dark burnt-orange & eucalyptus ambient blobs */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute top-1/4 -left-16 w-[420px] h-[420px] rounded-full bg-[#B84D1D]/10 blur-[110px] animate-blob-slow"
+        className="pointer-events-none absolute top-1/4 -left-16 w-[420px] h-[420px] rounded-full bg-[#752D43]/10 blur-[110px] animate-blob-slow"
       />
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute top-1/3 right-0 w-[440px] h-[440px] rounded-full bg-[#DCEFD9]/70 blur-[100px] animate-blob-slow-reverse"
+        className="pointer-events-none absolute top-1/3 right-0 w-[440px] h-[440px] rounded-full bg-[#EFE6DF]/70 blur-[100px] animate-blob-slow-reverse"
       />
 
       <div className="relative z-10 max-w-6xl mx-auto px-6">
@@ -79,12 +79,12 @@ export function YogaServicesOverview({
         <RevealOnScroll>
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10">
             <div className="max-w-2xl">
-              <p className="text-[13.5px] font-medium text-[#963B14] mb-3">
+              <p className="text-[13.5px] font-medium text-[#5A1E31] mb-3">
                 Online Wellness · Europe &amp; USA
               </p>
-              <h2 className="text-[36px] md:text-[48px] font-normal leading-[1.08] tracking-[-0.025em] text-[#18241C]">
+              <h2 className="text-[36px] md:text-[48px] font-normal leading-[1.08] tracking-[-0.025em] text-[#51372E]">
                 Four ways to practise live or at your own{' '}
-                <span className="font-cursive text-[48px] md:text-[64px] text-[#B84D1D] font-normal leading-none">
+                <span className="font-cursive text-[48px] md:text-[64px] text-[#752D43] font-normal leading-none">
                   pace.
                 </span>
               </h2>
@@ -95,7 +95,7 @@ export function YogaServicesOverview({
                 type="button"
                 onClick={() => scrollStrip('left')}
                 aria-label="Scroll services left"
-                className="w-10 h-10 rounded-full bg-white border border-[#DDE7DC] text-[#18241C] hover:border-[#B84D1D]/45 hover:bg-[#F8EDE6] flex items-center justify-center transition-colors cursor-pointer"
+                className="w-10 h-10 rounded-full bg-white border border-[#D8CEC4] text-[#51372E] hover:border-[#752D43]/45 hover:bg-[#FBF0F2] flex items-center justify-center transition-colors cursor-pointer"
               >
                 <ArrowLeft className="w-4 h-4" />
               </button>
@@ -103,7 +103,7 @@ export function YogaServicesOverview({
                 type="button"
                 onClick={() => scrollStrip('right')}
                 aria-label="Scroll services right"
-                className="w-10 h-10 rounded-full bg-white border border-[#DDE7DC] text-[#18241C] hover:border-[#B84D1D]/45 hover:bg-[#F8EDE6] flex items-center justify-center transition-colors cursor-pointer"
+                className="w-10 h-10 rounded-full bg-white border border-[#D8CEC4] text-[#51372E] hover:border-[#752D43]/45 hover:bg-[#FBF0F2] flex items-center justify-center transition-colors cursor-pointer"
               >
                 <ArrowRight className="w-4 h-4" />
               </button>
@@ -118,10 +118,10 @@ export function YogaServicesOverview({
           {COACHING_DISCIPLINES.map((discipline) => {
             const tintBg =
               discipline.tint === 'sage'
-                ? 'bg-[#EBF3EA]'
+                ? 'bg-[#EAE1DA]'
                 : discipline.tint === 'lavender'
-                  ? 'bg-[#F8EDE6]'
-                  : 'bg-[#F1F6E7]';
+                  ? 'bg-[#FBF0F2]'
+                  : 'bg-[#F9F3EE]';
 
             return (
               <motion.article
@@ -132,10 +132,10 @@ export function YogaServicesOverview({
                 onClick={() =>
                   onSelectDiscipline(discipline.id, discipline.recommendedMasterId)
                 }
-                className="group shrink-0 snap-start w-[310px] sm:w-[340px] bg-white rounded-[2.25rem] border border-[#DDE7DC] hover:border-[#B84D1D]/45 soft-card-shadow hover:ember-card-shadow overflow-hidden flex flex-col justify-between transition-[border-color,box-shadow] duration-300 cursor-pointer will-change-transform"
+                className="group shrink-0 snap-start w-[310px] sm:w-[340px] bg-white rounded-[2.25rem] border border-[#D8CEC4] hover:border-[#752D43]/45 soft-card-shadow hover:ember-card-shadow overflow-hidden flex flex-col justify-between transition-[border-color,box-shadow] duration-300 cursor-pointer will-change-transform"
               >
                 <div>
-                  <div className="aspect-[4/3] w-full overflow-hidden bg-[#EBF3EA]">
+                  <div className="aspect-[4/3] w-full overflow-hidden bg-[#EAE1DA]">
                     <ResilientImage
                       src={discipline.imageUrl}
                       alt={discipline.imageAlt}
@@ -144,16 +144,16 @@ export function YogaServicesOverview({
                     />
                   </div>
                   <div className="p-6">
-                    <p className="text-[12px] text-[#526458] mb-2">
-                      <span className="tabular-nums-mono text-[#B84D1D] font-medium">
+                    <p className="text-[12px] text-[#72584D] mb-2">
+                      <span className="tabular-nums-mono text-[#752D43] font-medium">
                         {discipline.index}
                       </span>{' '}
                       · {discipline.cadence}
                     </p>
-                    <h3 className="text-[21px] font-medium leading-snug text-[#18241C] group-hover:text-[#B84D1D] transition-colors mb-2.5">
+                    <h3 className="text-[21px] font-medium leading-snug text-[#51372E] group-hover:text-[#752D43] transition-colors mb-2.5">
                       {discipline.title}
                     </h3>
-                    <p className="text-[14px] leading-[1.65] text-[#526458]">
+                    <p className="text-[14px] leading-[1.65] text-[#72584D]">
                       {discipline.summary}
                     </p>
                   </div>
@@ -162,10 +162,10 @@ export function YogaServicesOverview({
                 <div
                   className={`mx-4 mb-4 px-4 py-3 rounded-[1.25rem] flex items-center justify-between gap-2 ${tintBg}`}
                 >
-                  <span className="tabular-nums-mono text-[11.5px] text-[#18241C] font-medium">
+                  <span className="tabular-nums-mono text-[11.5px] text-[#51372E] font-medium">
                     {discipline.retainerRange}
                   </span>
-                  <span className="text-[13px] font-medium text-[#B84D1D] whitespace-nowrap">
+                  <span className="text-[13px] font-medium text-[#752D43] whitespace-nowrap">
                     Explore →
                   </span>
                 </div>
@@ -178,17 +178,17 @@ export function YogaServicesOverview({
         <RevealOnScroll delay={0.1} className="mt-16">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
             <div>
-              <p className="text-[14px] font-medium text-[#526458] mb-1.5">
+              <p className="text-[14px] font-medium text-[#72584D] mb-1.5">
                 Programmes & Guided Challenges
               </p>
-              <h3 className="text-[30px] md:text-[38px] font-normal leading-[1.1] tracking-[-0.025em] text-[#18241C]">
+              <h3 className="text-[30px] md:text-[38px] font-normal leading-[1.1] tracking-[-0.025em] text-[#51372E]">
                 7, 21 & 30-day resets—plus 4 to 12 week pathways.
               </h3>
             </div>
             <button
               type="button"
               onClick={() => onBookFreeIntro('Free Intro Session — Programme Guidance')}
-              className="inline-flex items-center gap-2 px-5 py-2.5 text-[13px] font-medium text-[#F7FAF6] bg-[#B84D1D] hover:bg-[#963B14] rounded-full transition-colors whitespace-nowrap shrink-0 self-start sm:self-auto cursor-pointer"
+              className="inline-flex items-center gap-2 px-5 py-2.5 text-[13px] font-medium text-[#F2EAE5] bg-[#752D43] hover:bg-[#5A1E31] rounded-full transition-colors whitespace-nowrap shrink-0 self-start sm:self-auto cursor-pointer"
             >
               <span>Start With Free Intro</span>
               <ArrowRight className="w-3.5 h-3.5" />
@@ -199,10 +199,10 @@ export function YogaServicesOverview({
             {ONLINE_PROGRAMMES.map((prog) => {
               const badgeStyle =
                 prog.tint === 'ember'
-                  ? 'bg-[#F8EDE6] text-[#B84D1D] border-[#B84D1D]/20'
+                  ? 'bg-[#FBF0F2] text-[#752D43] border-[#752D43]/20'
                   : prog.tint === 'eucalyptus'
-                    ? 'bg-[#EBF3EA] text-[#3E6F4E] border-[#3E6F4E]/20'
-                    : 'bg-[#F1F6E7] text-[#3E6F4E] border-[#3E6F4E]/20';
+                    ? 'bg-[#EAE1DA] text-[#752D43] border-[#752D43]/20'
+                    : 'bg-[#F9F3EE] text-[#752D43] border-[#752D43]/20';
               return (
                 <motion.button
                   key={prog.id}
@@ -213,7 +213,7 @@ export function YogaServicesOverview({
                   onClick={() =>
                     onBookFreeIntro(`Programme Inquiry: ${prog.durationTag} — ${prog.title}`)
                   }
-                  className="group text-left bg-white rounded-[2rem] border border-[#DDE7DC] hover:border-[#B84D1D]/45 soft-card-shadow hover:ember-card-shadow p-6 flex flex-col justify-between gap-4 transition-[border-color,box-shadow] duration-300 cursor-pointer will-change-transform"
+                  className="group text-left bg-white rounded-[2rem] border border-[#D8CEC4] hover:border-[#752D43]/45 soft-card-shadow hover:ember-card-shadow p-6 flex flex-col justify-between gap-4 transition-[border-color,box-shadow] duration-300 cursor-pointer will-change-transform"
                 >
                   <div>
                     <span
@@ -221,14 +221,14 @@ export function YogaServicesOverview({
                     >
                       {prog.durationTag}
                     </span>
-                    <h4 className="text-[18px] font-medium text-[#18241C] group-hover:text-[#B84D1D] transition-colors leading-snug mb-2">
+                    <h4 className="text-[18px] font-medium text-[#51372E] group-hover:text-[#752D43] transition-colors leading-snug mb-2">
                       {prog.title}
                     </h4>
-                    <p className="text-[13px] leading-[1.65] text-[#526458]">{prog.summary}</p>
+                    <p className="text-[13px] leading-[1.65] text-[#72584D]">{prog.summary}</p>
                   </div>
-                  <div className="pt-3 border-t border-[#EBF3EA] flex items-center justify-between gap-2 text-[12px]">
-                    <span className="text-[#526458] truncate">{prog.format}</span>
-                    <span className="font-medium text-[#B84D1D] shrink-0">Join →</span>
+                  <div className="pt-3 border-t border-[#EAE1DA] flex items-center justify-between gap-2 text-[12px]">
+                    <span className="text-[#72584D] truncate">{prog.format}</span>
+                    <span className="font-medium text-[#752D43] shrink-0">Join →</span>
                   </div>
                 </motion.button>
               );
@@ -238,20 +238,20 @@ export function YogaServicesOverview({
 
         {/* 3. Architectural Method Showcase + Breath Preview */}
         <RevealOnScroll delay={0.12} className="mt-20">
-          <div className="bg-white rounded-[2.75rem] border border-[#DDE7DC] soft-card-shadow overflow-hidden">
+          <div className="bg-white rounded-[2.75rem] border border-[#D8CEC4] soft-card-shadow overflow-hidden">
             <div className="grid grid-cols-1 lg:grid-cols-12 items-stretch">
               <div className="lg:col-span-6 p-8 sm:p-11 flex flex-col justify-between gap-8">
                 <div>
-                  <p className="text-[14px] font-medium text-[#B84D1D] mb-3">
+                  <p className="text-[14px] font-medium text-[#752D43] mb-3">
                     Your Wellness, Guided
                   </p>
-                  <h2 className="text-[34px] md:text-[44px] font-normal leading-[1.1] tracking-[-0.025em] text-[#18241C] mb-5">
+                  <h2 className="text-[34px] md:text-[44px] font-normal leading-[1.1] tracking-[-0.025em] text-[#51372E] mb-5">
                     Practical daily support across Europe, the USA, and{' '}
-                    <span className="font-cursive text-[48px] md:text-[62px] text-[#3E6F4E] font-normal leading-none">
+                    <span className="font-cursive text-[48px] md:text-[62px] text-[#752D43] font-normal leading-none">
                       India.
                     </span>
                   </h2>
-                  <p className="text-[15px] leading-[1.7] text-[#526458] mb-7">
+                  <p className="text-[15px] leading-[1.7] text-[#72584D] mb-7">
                     Whether you join a 30-minute live breathwork class before your workday, book a
                     1-on-1 coaching session, enrol in our HerWAY postpartum pilot, or host a
                     corporate retreat in India through our licensed partners, every step feels
@@ -265,12 +265,12 @@ export function YogaServicesOverview({
                       whileTap={{ scale: 0.98 }}
                       transition={EXPAND_SPRING}
                       onClick={onExploreSchedule}
-                      className="text-left p-4 rounded-2xl bg-[#EBF3EA] hover:bg-[#DCECD9] border border-transparent hover:border-[#3E6F4E]/30 transition-colors cursor-pointer"
+                      className="text-left p-4 rounded-2xl bg-[#EAE1DA] hover:bg-[#DCECD9] border border-transparent hover:border-[#752D43]/30 transition-colors cursor-pointer"
                     >
-                      <span className="block text-[14px] font-medium text-[#18241C] mb-1">
+                      <span className="block text-[14px] font-medium text-[#51372E] mb-1">
                         EU & US Schedule
                       </span>
-                      <span className="text-[12px] text-[#526458] leading-relaxed block">
+                      <span className="text-[12px] text-[#72584D] leading-relaxed block">
                         Live yoga, meditation & breathwork times
                       </span>
                     </motion.button>
@@ -281,12 +281,12 @@ export function YogaServicesOverview({
                       whileTap={{ scale: 0.98 }}
                       transition={EXPAND_SPRING}
                       onClick={onExploreHerWay}
-                      className="text-left p-4 rounded-2xl bg-[#F8EDE6] hover:bg-[#F2DFD3] border border-transparent hover:border-[#B84D1D]/30 transition-colors cursor-pointer"
+                      className="text-left p-4 rounded-2xl bg-[#FBF0F2] hover:bg-[#F5EAE8] border border-transparent hover:border-[#752D43]/30 transition-colors cursor-pointer"
                     >
-                      <span className="block text-[14px] font-medium text-[#18241C] mb-1">
+                      <span className="block text-[14px] font-medium text-[#51372E] mb-1">
                         HerWAY Pilot
                       </span>
-                      <span className="text-[12px] text-[#526458] leading-relaxed block">
+                      <span className="text-[12px] text-[#72584D] leading-relaxed block">
                         Supervised postpartum wellbeing pathway
                       </span>
                     </motion.button>
@@ -297,12 +297,12 @@ export function YogaServicesOverview({
                       whileTap={{ scale: 0.98 }}
                       transition={EXPAND_SPRING}
                       onClick={onExploreBusiness}
-                      className="text-left p-4 rounded-2xl bg-[#F1F6E7] hover:bg-[#E4EED5] border border-transparent hover:border-[#3E6F4E]/30 transition-colors cursor-pointer"
+                      className="text-left p-4 rounded-2xl bg-[#F9F3EE] hover:bg-[#E4EED5] border border-transparent hover:border-[#752D43]/30 transition-colors cursor-pointer"
                     >
-                      <span className="block text-[14px] font-medium text-[#18241C] mb-1">
+                      <span className="block text-[14px] font-medium text-[#51372E] mb-1">
                         Corporate & India
                       </span>
-                      <span className="text-[12px] text-[#526458] leading-relaxed block">
+                      <span className="text-[12px] text-[#72584D] leading-relaxed block">
                         Burnout pilots & licensed India retreats
                       </span>
                     </motion.button>
@@ -310,20 +310,20 @@ export function YogaServicesOverview({
                 </div>
 
                 {/* Subtle Interactive Pranayama Breathwork Bar */}
-                <div className="pt-6 border-t border-[#EBF3EA] flex flex-wrap items-center justify-between gap-4">
+                <div className="pt-6 border-t border-[#EAE1DA] flex flex-wrap items-center justify-between gap-4">
                   <div className="flex items-center gap-3">
                     <motion.div
                       animate={{ scale: breathPhase.scale }}
                       transition={{ duration: 1.5, ease: 'easeInOut' }}
-                      className="w-11 h-11 rounded-full bg-[#F8EDE6] border border-[#B84D1D]/30 text-[#B84D1D] flex items-center justify-center shrink-0"
+                      className="w-11 h-11 rounded-full bg-[#FBF0F2] border border-[#752D43]/30 text-[#752D43] flex items-center justify-center shrink-0"
                     >
                       <Wind className="w-4 h-4" />
                     </motion.div>
                     <div>
-                      <p className="text-[13px] font-medium text-[#18241C]">
+                      <p className="text-[13px] font-medium text-[#51372E]">
                         {breathPhase.label}
                       </p>
-                      <p className="text-[12px] text-[#526458]">
+                      <p className="text-[12px] text-[#72584D]">
                         Gentle guided breath cadence preview
                       </p>
                     </div>
@@ -336,14 +336,14 @@ export function YogaServicesOverview({
                         setTick(0);
                         setBreathRunning((prev) => !prev);
                       }}
-                      className="px-5 py-2.5 text-[13px] font-medium text-[#18241C] bg-[#EBF3EA] hover:bg-[#B7D7BD] rounded-full transition-colors cursor-pointer whitespace-nowrap"
+                      className="px-5 py-2.5 text-[13px] font-medium text-[#51372E] bg-[#EAE1DA] hover:bg-[#C4B6A6] rounded-full transition-colors cursor-pointer whitespace-nowrap"
                     >
                       {breathRunning ? 'Pause Breath' : 'Begin Breath'}
                     </button>
                     <button
                       type="button"
                       onClick={onExploreOnlineWellness}
-                      className="px-4 py-2.5 text-[13px] font-medium text-[#B84D1D] hover:text-[#963B14] transition-colors cursor-pointer whitespace-nowrap"
+                      className="px-4 py-2.5 text-[13px] font-medium text-[#752D43] hover:text-[#5A1E31] transition-colors cursor-pointer whitespace-nowrap"
                     >
                       Full Library →
                     </button>
@@ -352,29 +352,29 @@ export function YogaServicesOverview({
               </div>
 
               {/* Right 2x2 Visual Yoga Photography Collage */}
-              <div className="lg:col-span-6 p-4 sm:p-5 bg-[#F7FAF6] grid grid-cols-2 gap-4">
-                <div className="rounded-[1.75rem] overflow-hidden min-h-[200px] bg-[#EBF3EA]">
+              <div className="lg:col-span-6 p-4 sm:p-5 bg-[#F2EAE5] grid grid-cols-2 gap-4">
+                <div className="rounded-[1.75rem] overflow-hidden min-h-[200px] bg-[#EAE1DA]">
                   <ResilientImage
                     src={LIBRARY_NADI_IMAGE}
                     alt="Eyes-closed breathwork and meditation beside bronze singing bowls"
                     className="w-full h-full object-cover object-[50%_20%] hover:scale-105 transition-transform duration-700"
                   />
                 </div>
-                <div className="rounded-[1.75rem] overflow-hidden min-h-[200px] bg-[#F1F6E7]">
+                <div className="rounded-[1.75rem] overflow-hidden min-h-[200px] bg-[#F9F3EE]">
                   <ResilientImage
                     src={GROUNDING_HANDS_IMAGE}
                     alt="Hands grounding calmly on a woven rug beside bronze singing bowls"
                     className="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-700"
                   />
                 </div>
-                <div className="rounded-[1.75rem] overflow-hidden min-h-[200px] bg-[#E1ECE0]">
+                <div className="rounded-[1.75rem] overflow-hidden min-h-[200px] bg-[#E2D7CF]">
                   <ResilientImage
                     src={ABOUT_MALA_HANDS_IMAGE}
                     alt="Mindful clasped hands with wooden mala beads and sage embroidered shawl"
                     className="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-700"
                   />
                 </div>
-                <div className="rounded-[1.75rem] overflow-hidden min-h-[200px] bg-[#F8EDE6]">
+                <div className="rounded-[1.75rem] overflow-hidden min-h-[200px] bg-[#FBF0F2]">
                   <ResilientImage
                     src={LAVENDER_PAVILION_IMAGE}
                     alt="Lavender wreath and woven natural sanctuary accents on timber pavilion wall"
@@ -398,12 +398,12 @@ export function InteractiveFaqAccordion() {
       <div className="max-w-3xl mx-auto px-6">
         <RevealOnScroll>
           <div className="text-center mb-12">
-            <p className="text-[13.5px] font-medium text-[#963B14] mb-3">
+            <p className="text-[13.5px] font-medium text-[#5A1E31] mb-3">
               Questions &amp; Practical Details
             </p>
-            <h2 className="text-[34px] md:text-[46px] font-normal leading-[1.1] tracking-[-0.025em] text-[#18241C]">
+            <h2 className="text-[34px] md:text-[46px] font-normal leading-[1.1] tracking-[-0.025em] text-[#51372E]">
               Everything you need to begin{' '}
-              <span className="font-cursive text-[46px] md:text-[62px] text-[#B84D1D] font-normal leading-none">
+              <span className="font-cursive text-[46px] md:text-[62px] text-[#752D43] font-normal leading-none">
                 calmly.
               </span>
             </h2>
@@ -417,7 +417,7 @@ export function InteractiveFaqAccordion() {
               <RevealOnScroll key={item.id} delay={idx * 0.05}>
                 <div
                   className={`bg-white rounded-2xl border soft-card-shadow overflow-hidden transition-colors ${
-                    isOpen ? 'border-[#B84D1D]/35' : 'border-[#DDE7DC]'
+                    isOpen ? 'border-[#752D43]/35' : 'border-[#D8CEC4]'
                   }`}
                 >
                   <button
@@ -426,12 +426,12 @@ export function InteractiveFaqAccordion() {
                     onClick={() => setOpenId(isOpen ? null : item.id)}
                     className="w-full p-6 flex items-center justify-between gap-6 text-left cursor-pointer"
                   >
-                    <span className="text-[16px] md:text-[17px] font-medium text-[#18241C] leading-snug">
+                    <span className="text-[16px] md:text-[17px] font-medium text-[#51372E] leading-snug">
                       {item.question}
                     </span>
                     <Plus
                       className={`w-5 h-5 shrink-0 transition-transform duration-300 ${
-                        isOpen ? 'rotate-45 text-[#B84D1D]' : 'rotate-0 text-[#526458]'
+                        isOpen ? 'rotate-45 text-[#752D43]' : 'rotate-0 text-[#72584D]'
                       }`}
                     />
                   </button>
@@ -442,7 +442,7 @@ export function InteractiveFaqAccordion() {
                     }`}
                   >
                     <div className="overflow-hidden">
-                      <p className="px-6 pb-6 text-[15px] leading-[1.7] text-[#526458]">
+                      <p className="px-6 pb-6 text-[15px] leading-[1.7] text-[#72584D]">
                         {item.answer}
                       </p>
                     </div>

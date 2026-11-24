@@ -262,7 +262,7 @@ export default function App() {
   const activeInquiryCount = savedInquiries.filter((i) => i.status === 'confirmed').length;
 
   return (
-    <div className="min-h-screen bg-[#F7FAF6] text-[#18241C] flex flex-col relative">
+    <div className="min-h-screen bg-[#F2EAE5] text-[#51372E] flex flex-col relative">
       <ScrollProgressBar />
 
       <Navbar

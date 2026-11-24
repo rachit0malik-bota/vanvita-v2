@@ -119,7 +119,7 @@ function CalmPillarCard({
       onClick={onClick}
       whileHover={{ y: -6 }}
       transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-      className="group relative h-[410px] sm:h-[440px] w-full rounded-[2rem] overflow-hidden bg-[#18241C] text-left text-[#F7FAF6] border border-[#DDE7DC] soft-card-shadow cursor-pointer flex flex-col justify-between p-6 sm:p-7"
+      className="group relative h-[410px] sm:h-[440px] w-full rounded-[2rem] overflow-hidden bg-[#51372E] text-left text-[#F2EAE5] border border-[#D8CEC4] soft-card-shadow cursor-pointer flex flex-col justify-between p-6 sm:p-7"
     >
       <div className="absolute inset-0 overflow-hidden">
         <ResilientImage
@@ -133,25 +133,25 @@ function CalmPillarCard({
           className="absolute inset-0"
           style={{
             background:
-              'linear-gradient(180deg, rgba(20,31,24,0.44) 0%, rgba(20,31,24,0.16) 38%, rgba(20,31,24,0.74) 68%, rgba(16,25,19,0.94) 100%)',
+              'linear-gradient(180deg, rgba(50,32,25,0.44) 0%, rgba(50,32,25,0.16) 38%, rgba(50,32,25,0.74) 68%, rgba(40,24,19,0.94) 100%)',
           }}
         />
       </div>
 
       <div className="relative z-10 flex items-center justify-between gap-3">
-        <span className="text-[12.5px] font-medium text-[#F7FAF6] bg-[#18241C]/62 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/15">
+        <span className="text-[12.5px] font-medium text-[#F2EAE5] bg-[#51372E]/62 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/15">
           {card.eyebrow}
         </span>
-        <span className="w-9 h-9 rounded-full bg-[#B84D1D] text-[#F7FAF6] flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:translate-x-0.5">
+        <span className="w-9 h-9 rounded-full bg-[#752D43] text-[#F2EAE5] flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:translate-x-0.5">
           <ArrowRight className="w-4 h-4" />
         </span>
       </div>
 
       <div className="relative z-10">
-        <h3 className="text-[23px] sm:text-[25px] font-medium leading-[1.16] tracking-[-0.02em] text-[#F7FAF6] mb-2.5">
+        <h3 className="text-[23px] sm:text-[25px] font-medium leading-[1.16] tracking-[-0.02em] text-[#F2EAE5] mb-2.5">
           {card.title}
         </h3>
-        <p className="text-[14px] leading-[1.6] text-[#F7FAF6]/92">{card.body}</p>
+        <p className="text-[14px] leading-[1.6] text-[#F2EAE5]/92">{card.body}</p>
       </div>
     </motion.button>
   );
@@ -187,11 +187,11 @@ function CountUpStat({
 
   return (
     <div className="pt-5">
-      <p className="tabular-nums-mono text-[38px] sm:text-[44px] font-medium tracking-[-0.03em] text-[#18241C] leading-none mb-2">
+      <p className="tabular-nums-mono text-[38px] sm:text-[44px] font-medium tracking-[-0.03em] text-[#51372E] leading-none mb-2">
         {val}
-        <span className="text-[#B84D1D]">{suffix}</span>
+        <span className="text-[#752D43]">{suffix}</span>
       </p>
-      <p className="text-[13.5px] font-medium text-[#3F5246]">{label}</p>
+      <p className="text-[13.5px] font-medium text-[#634B41]">{label}</p>
     </div>
   );
 }
@@ -252,7 +252,7 @@ export function SanctuaryScrollStory({
   const beat4Y = useTransform(smoothProgress, [0.75, 0.84], [26, 0]);
   const beat4PointerEvents = useTransform(smoothProgress, (v) => (v >= 0.77 ? 'auto' : 'none'));
 
-  // Subtle #F7FAF6 bottom horizon blend as the white Beat 5 panel rises up
+  // Subtle #F2EAE5 bottom horizon blend as the white Beat 5 panel rises up
   const bottomBlendOpacity = useTransform(smoothProgress, [0.85, 0.98], [0, 1]);
 
   // Dedicated 60fps rAF video scrubbing loop — zero React state updates during scroll
@@ -286,18 +286,18 @@ export function SanctuaryScrollStory({
     return () => window.cancelAnimationFrame(rafId);
   }, [prefersReducedMotion, videoError, videoReady, smoothProgress]);
 
-  // Unified calm editorial color-grade matching the #F7FAF6 morning-dew sanctuary palette
+  // Unified calm editorial color-grade matching the #F2EAE5 morning-dew sanctuary palette
   const unifiedColorGradeClass =
     'w-full h-full object-cover object-center brightness-[1.03] contrast-[0.96] saturate-[0.90]';
 
   return (
-    <div className="relative bg-[#F7FAF6]">
+    <div className="relative bg-[#F2EAE5]">
       {/* PINNED 60FPS SCROLL-SCRUBBED DRONE FLY-IN STORY */}
       <div
         ref={storyRef}
         className={`relative w-full ${prefersReducedMotion ? 'h-screen' : 'h-[380vh]'}`}
       >
-        <div className="sticky top-0 h-screen w-full overflow-hidden bg-[#F7FAF6]">
+        <div className="sticky top-0 h-screen w-full overflow-hidden bg-[#F2EAE5]">
           {/* 1. VISUAL STAGE: High-Quality Hero Still -> Cross-Fade -> Fast-Seek Scrubbed Video */}
           <div className="absolute inset-0 bg-[#E6ECE5]">
             {/* Layer A: Active All-Intra Scrubbed Sanctuary Fly-In Video */}
@@ -346,13 +346,13 @@ export function SanctuaryScrollStory({
               />
             </motion.div>
 
-            {/* Subtle #F7FAF6 atmospheric color-harmony wash (zero noise/grain) */}
+            {/* Subtle #F2EAE5 atmospheric color-harmony wash (zero noise/grain) */}
             <div
               aria-hidden="true"
-              className="pointer-events-none absolute inset-0 bg-[#F7FAF6]/10"
+              className="pointer-events-none absolute inset-0 bg-[#F2EAE5]/10"
             />
 
-            {/* Beat 1 Top-to-Bottom Calm #F7FAF6 Sky Blend for crisp dark-pine headline readability */}
+            {/* Beat 1 Top-to-Bottom Calm #F2EAE5 Sky Blend for crisp dark-pine headline readability */}
             <motion.div
               aria-hidden="true"
               style={{ opacity: prefersReducedMotion ? 1 : heroOpacity }}
@@ -362,7 +362,7 @@ export function SanctuaryScrollStory({
                 className="w-full h-full"
                 style={{
                   background:
-                    'linear-gradient(180deg, rgba(247,250,246,0.95) 0%, rgba(247,250,246,0.78) 32%, rgba(247,250,246,0.16) 58%, rgba(20,31,24,0.56) 100%)',
+                    'linear-gradient(180deg, rgba(242,234,229,0.95) 0%, rgba(242,234,229,0.78) 32%, rgba(242,234,229,0.16) 58%, rgba(50,32,25,0.56) 100%)',
                 }}
               />
             </motion.div>
@@ -374,20 +374,20 @@ export function SanctuaryScrollStory({
                 style={{
                   opacity: veilOpacity,
                   background:
-                    'linear-gradient(180deg, rgba(18,28,22,0.68) 0%, rgba(18,28,22,0.54) 50%, rgba(18,28,22,0.74) 100%)',
+                    'linear-gradient(180deg, rgba(45,28,22,0.68) 0%, rgba(45,28,22,0.54) 50%, rgba(45,28,22,0.74) 100%)',
                 }}
                 className="pointer-events-none absolute inset-0 will-change-[opacity]"
               />
             )}
 
-            {/* Seamless #F7FAF6 lower horizon transition as Beat 5 approaches */}
+            {/* Seamless #F2EAE5 lower horizon transition as Beat 5 approaches */}
             {!prefersReducedMotion && (
               <motion.div
                 aria-hidden="true"
                 style={{
                   opacity: bottomBlendOpacity,
                   background:
-                    'linear-gradient(180deg, rgba(247,250,246,0) 65%, rgba(247,250,246,0.55) 100%)',
+                    'linear-gradient(180deg, rgba(242,234,229,0) 65%, rgba(242,234,229,0.55) 100%)',
                 }}
                 className="pointer-events-none absolute inset-0"
               />
@@ -408,7 +408,7 @@ export function SanctuaryScrollStory({
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.85, ease: WELLNESS_EASE }}
-                className="text-[13.5px] font-medium tracking-[0.04em] text-[#963B14] mb-4"
+                className="text-[13.5px] font-medium tracking-[0.04em] text-[#5A1E31] mb-4"
               >
                 VANVITA Wellbeing · Live in Europe &amp; the USA
               </motion.p>
@@ -417,10 +417,10 @@ export function SanctuaryScrollStory({
                 initial={{ opacity: 0, y: 18 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.95, delay: 0.08, ease: WELLNESS_EASE }}
-                className="text-[46px] sm:text-[64px] lg:text-[76px] font-medium text-[#18241C] leading-[1.02] tracking-[-0.03em] mb-5"
+                className="text-[46px] sm:text-[64px] lg:text-[76px] font-medium text-[#51372E] leading-[1.02] tracking-[-0.03em] mb-5"
               >
                 Wellbeing, made{' '}
-                <span className="font-cursive text-[66px] sm:text-[88px] lg:text-[104px] text-[#B84D1D] font-normal leading-none inline-block -mb-2">
+                <span className="font-cursive text-[66px] sm:text-[88px] lg:text-[104px] text-[#752D43] font-normal leading-none inline-block -mb-2">
                   personal.
                 </span>
               </motion.h1>
@@ -447,7 +447,7 @@ export function SanctuaryScrollStory({
                   whileHover={{ y: -2, scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   onClick={onBookFreeIntro}
-                  className="inline-flex items-center justify-center gap-2 px-7 py-3.5 text-[14.5px] font-medium text-[#F7FAF6] bg-[#B84D1D] hover:bg-[#963B14] rounded-full ember-card-shadow transition-colors whitespace-nowrap shrink-0 cursor-pointer min-h-[46px]"
+                  className="inline-flex items-center justify-center gap-2 px-7 py-3.5 text-[14.5px] font-medium text-[#F2EAE5] bg-[#752D43] hover:bg-[#5A1E31] rounded-full ember-card-shadow transition-colors whitespace-nowrap shrink-0 cursor-pointer min-h-[46px]"
                 >
                   <span>Book Free Intro Session</span>
                   <ArrowRight className="w-4 h-4" />
@@ -458,7 +458,7 @@ export function SanctuaryScrollStory({
                   whileHover={{ y: -2, scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   onClick={() => onNavigate('schedule')}
-                  className="inline-flex items-center justify-center gap-2 px-7 py-3.5 text-[14.5px] font-medium text-[#18241C] bg-white hover:bg-[#F7FAF6] border border-[#DDE7DC] rounded-full soft-card-shadow transition-colors whitespace-nowrap shrink-0 cursor-pointer min-h-[46px]"
+                  className="inline-flex items-center justify-center gap-2 px-7 py-3.5 text-[14.5px] font-medium text-[#51372E] bg-white hover:bg-[#F2EAE5] border border-[#D8CEC4] rounded-full soft-card-shadow transition-colors whitespace-nowrap shrink-0 cursor-pointer min-h-[46px]"
                 >
                   <span>Europe &amp; USA Schedule</span>
                 </motion.button>
@@ -469,9 +469,9 @@ export function SanctuaryScrollStory({
                   <button
                     type="button"
                     onClick={onOpenInquiries}
-                    className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/92 text-[13px] font-medium text-[#18241C] hover:bg-white transition-colors cursor-pointer soft-card-shadow"
+                    className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/92 text-[13px] font-medium text-[#51372E] hover:bg-white transition-colors cursor-pointer soft-card-shadow"
                   >
-                    <CalendarCheck2 className="w-4 h-4 text-[#B84D1D]" />
+                    <CalendarCheck2 className="w-4 h-4 text-[#752D43]" />
                     <span>
                       Saved inquiries (<span className="tabular-nums-mono">{activeInquiryCount}</span>)
                     </span>
@@ -481,21 +481,21 @@ export function SanctuaryScrollStory({
             </div>
 
             <div className="flex items-end justify-between gap-6 w-full">
-              <div className="hidden sm:block pl-4 border-l-2 border-[#D97A4A] max-w-xs">
-                <p className="text-[13.5px] leading-[1.6] text-[#F7FAF6] font-normal">
+              <div className="hidden sm:block pl-4 border-l-2 border-[#DC7188] max-w-xs">
+                <p className="text-[13.5px] leading-[1.6] text-[#F2EAE5] font-normal">
                   Live well. Live fully. Practical, personal wellbeing built around real daily
                   schedules.
                 </p>
               </div>
 
-              <div className="ml-auto inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#18241C]/68 backdrop-blur-md border border-white/20 text-[#F7FAF6]">
+              <div className="ml-auto inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#51372E]/68 backdrop-blur-md border border-white/20 text-[#F2EAE5]">
                 <span className="text-[12.5px] font-medium">Scroll to step inside</span>
                 <motion.span
                   animate={{ y: [0, 3, 0] }}
                   transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
                   className="inline-flex"
                 >
-                  <ChevronDown className="w-4 h-4 text-[#E6A47E]" />
+                  <ChevronDown className="w-4 h-4 text-[#E8899D]" />
                 </motion.span>
               </div>
             </div>
@@ -507,8 +507,8 @@ export function SanctuaryScrollStory({
               style={{ opacity: beat2Opacity, y: beat2Y }}
               className="absolute inset-0 z-20 flex items-center justify-center px-6 pointer-events-none will-change-[transform,opacity]"
             >
-              <div className="max-w-3xl text-center text-[#F7FAF6]">
-                <p className="text-[14px] font-medium text-[#F0AE89] mb-4">Our Purpose</p>
+              <div className="max-w-3xl text-center text-[#F2EAE5]">
+                <p className="text-[14px] font-medium text-[#E8899D] mb-4">Our Purpose</p>
                 <h2 className="text-[38px] sm:text-[54px] lg:text-[66px] font-medium leading-[1.06] tracking-[-0.025em] mb-5">
                   Your wellness, guided.
                   <br />
@@ -517,7 +517,7 @@ export function SanctuaryScrollStory({
                     fully.
                   </span>
                 </h2>
-                <p className="text-[16px] sm:text-[18px] leading-[1.68] text-[#F7FAF6]/95 max-w-xl mx-auto">
+                <p className="text-[16px] sm:text-[18px] leading-[1.68] text-[#F2EAE5]/95 max-w-xl mx-auto">
                   Personal, practical wellbeing support made easy to reach—whether you join from
                   London, Zurich, New York, or San Francisco.
                 </p>
@@ -536,7 +536,7 @@ export function SanctuaryScrollStory({
               className="absolute inset-0 z-20 flex flex-col justify-center px-6 sm:px-10 max-w-6xl mx-auto will-change-[transform,opacity]"
             >
               <div className="max-w-2xl mb-10">
-                <p className="text-[24px] sm:text-[32px] lg:text-[36px] font-normal leading-[1.28] tracking-[-0.02em] text-[#F7FAF6]">
+                <p className="text-[24px] sm:text-[32px] lg:text-[36px] font-normal leading-[1.28] tracking-[-0.02em] text-[#F2EAE5]">
                   Expert-led wellbeing for individuals, companies, and new mothers — delivered live
                   online at times that suit Europe and the USA, and through licensed retreats in
                   India.
@@ -549,11 +549,11 @@ export function SanctuaryScrollStory({
                     key={item.title}
                     type="button"
                     onClick={() => onNavigate(item.target)}
-                    className="text-left p-5 rounded-2xl bg-[#F7FAF6]/95 hover:bg-white border border-[#DDE7DC] soft-card-shadow transition-colors cursor-pointer"
+                    className="text-left p-5 rounded-2xl bg-[#F2EAE5]/95 hover:bg-white border border-[#D8CEC4] soft-card-shadow transition-colors cursor-pointer"
                   >
-                    <p className="text-[15px] font-medium text-[#18241C] mb-1">{item.title}</p>
-                    <p className="text-[13.5px] leading-snug text-[#3F5246] mb-2">{item.detail}</p>
-                    <span className="text-[13px] font-medium text-[#B84D1D]">Explore →</span>
+                    <p className="text-[15px] font-medium text-[#51372E] mb-1">{item.title}</p>
+                    <p className="text-[13.5px] leading-snug text-[#634B41] mb-2">{item.detail}</p>
+                    <span className="text-[13px] font-medium text-[#752D43]">Explore →</span>
                   </button>
                 ))}
               </div>
@@ -571,14 +571,14 @@ export function SanctuaryScrollStory({
               className="absolute inset-0 z-20 flex flex-col justify-center px-6 sm:px-10 max-w-6xl mx-auto will-change-[transform,opacity]"
             >
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                <div className="lg:col-span-6 p-7 sm:p-9 rounded-[2rem] bg-[#18241C]/86 border border-white/20 backdrop-blur-xl text-[#F7FAF6] soft-card-shadow">
-                  <p className="text-[13.5px] font-medium text-[#F0AE89] mb-3">
+                <div className="lg:col-span-6 p-7 sm:p-9 rounded-[2rem] bg-[#51372E]/86 border border-white/20 backdrop-blur-xl text-[#F2EAE5] soft-card-shadow">
+                  <p className="text-[13.5px] font-medium text-[#E8899D] mb-3">
                     Live Online · Europe &amp; USA Time Zones
                   </p>
-                  <h2 className="text-[30px] sm:text-[38px] font-normal leading-[1.12] tracking-[-0.025em] text-[#F7FAF6] mb-4">
+                  <h2 className="text-[30px] sm:text-[38px] font-normal leading-[1.12] tracking-[-0.025em] text-[#F2EAE5] mb-4">
                     Practical wellbeing built for everyday life.
                   </h2>
-                  <p className="text-[15px] leading-[1.7] text-[#F7FAF6]/92 mb-6">
+                  <p className="text-[15px] leading-[1.7] text-[#F2EAE5]/92 mb-6">
                     Begin with a complimentary 20-minute intro session. Meet your teacher, explore
                     daily live classes across European and US hours, or plan a restorative retreat
                     in India.
@@ -587,7 +587,7 @@ export function SanctuaryScrollStory({
                     <button
                       type="button"
                       onClick={onBookFreeIntro}
-                      className="inline-flex items-center gap-2 px-6 py-3 min-h-[44px] rounded-full bg-[#B84D1D] hover:bg-[#963B14] text-[#F7FAF6] text-[14px] font-medium transition-colors cursor-pointer whitespace-nowrap"
+                      className="inline-flex items-center gap-2 px-6 py-3 min-h-[44px] rounded-full bg-[#752D43] hover:bg-[#5A1E31] text-[#F2EAE5] text-[14px] font-medium transition-colors cursor-pointer whitespace-nowrap"
                     >
                       <span>Book Free Intro</span>
                       <ArrowRight className="w-4 h-4" />
@@ -595,28 +595,28 @@ export function SanctuaryScrollStory({
                     <button
                       type="button"
                       onClick={() => onNavigate('schedule')}
-                      className="inline-flex items-center gap-2 px-5 py-3 min-h-[44px] rounded-full bg-white/14 hover:bg-white/24 border border-white/25 text-[#F7FAF6] text-[14px] font-medium transition-colors cursor-pointer whitespace-nowrap"
+                      className="inline-flex items-center gap-2 px-5 py-3 min-h-[44px] rounded-full bg-white/14 hover:bg-white/24 border border-white/25 text-[#F2EAE5] text-[14px] font-medium transition-colors cursor-pointer whitespace-nowrap"
                     >
                       <span>View Weekly Schedule</span>
                     </button>
                   </div>
                 </div>
 
-                <div className="lg:col-span-6 rounded-[2rem] bg-[#F7FAF6]/96 backdrop-blur-xl border border-[#DDE7DC] px-6 sm:px-7 py-3 soft-card-shadow">
+                <div className="lg:col-span-6 rounded-[2rem] bg-[#F2EAE5]/96 backdrop-blur-xl border border-[#D8CEC4] px-6 sm:px-7 py-3 soft-card-shadow">
                   {PATHWAY_ROWS.map((row) => (
                     <button
                       key={row.index}
                       type="button"
                       onClick={() => onNavigate(row.target)}
-                      className="w-full flex items-center justify-between gap-4 py-4 text-left border-b last:border-b-0 border-[#DDE7DC] text-[#18241C] hover:text-[#B84D1D] transition-colors cursor-pointer group"
+                      className="w-full flex items-center justify-between gap-4 py-4 text-left border-b last:border-b-0 border-[#D8CEC4] text-[#51372E] hover:text-[#752D43] transition-colors cursor-pointer group"
                     >
                       <div className="flex items-baseline gap-3.5 min-w-0">
-                        <span className="tabular-nums-mono text-[12px] text-[#963B14] font-medium shrink-0">
+                        <span className="tabular-nums-mono text-[12px] text-[#5A1E31] font-medium shrink-0">
                           {row.index}
                         </span>
                         <span className="text-[15px] font-medium leading-snug">{row.label}</span>
                       </div>
-                      <ArrowRight className="w-4 h-4 text-[#B84D1D] shrink-0 transition-transform duration-200 group-hover:translate-x-1" />
+                      <ArrowRight className="w-4 h-4 text-[#752D43] shrink-0 transition-transform duration-200 group-hover:translate-x-1" />
                     </button>
                   ))}
                 </div>
@@ -632,37 +632,37 @@ export function SanctuaryScrollStory({
             >
               <motion.div
                 style={{ scaleX: smoothProgress }}
-                className="h-full w-full origin-left bg-[#D97A4A]"
+                className="h-full w-full origin-left bg-[#DC7188]"
               />
             </div>
           )}
         </div>
       </div>
 
-      {/* BEAT 5 — RISING #F7FAF6 SOLUTIONS PANEL */}
-      <section className="relative z-20 -mt-[10vh] bg-[#F7FAF6] rounded-t-[2.75rem] border-t border-[#DDE7DC] shadow-[0_-20px_50px_rgba(24,36,28,0.10)] pt-16 sm:pt-20 pb-16 lg:pb-24 overflow-hidden">
+      {/* BEAT 5 — RISING #F2EAE5 SOLUTIONS PANEL */}
+      <section className="relative z-20 -mt-[10vh] bg-[#F2EAE5] rounded-t-[2.75rem] border-t border-[#D8CEC4] shadow-[0_-20px_50px_rgba(81,55,46,0.10)] pt-16 sm:pt-20 pb-16 lg:pb-24 overflow-hidden">
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute -top-24 right-10 w-[440px] h-[440px] rounded-full bg-[#B84D1D]/7 blur-[110px] animate-blob-slow"
+          className="pointer-events-none absolute -top-24 right-10 w-[440px] h-[440px] rounded-full bg-[#752D43]/7 blur-[110px] animate-blob-slow"
         />
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute bottom-0 left-0 w-[420px] h-[420px] rounded-full bg-[#D7ECD9]/65 blur-[105px] animate-blob-slow-reverse"
+          className="pointer-events-none absolute bottom-0 left-0 w-[420px] h-[420px] rounded-full bg-[#F5EAE8]/65 blur-[105px] animate-blob-slow-reverse"
         />
 
         <div className="relative z-10 max-w-6xl mx-auto px-6">
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-12">
             <div className="max-w-2xl">
-              <p className="text-[13.5px] font-medium text-[#963B14] mb-3">Three Core Pathways</p>
-              <h2 className="text-[36px] sm:text-[48px] lg:text-[54px] font-normal leading-[1.06] tracking-[-0.025em] text-[#18241C]">
+              <p className="text-[13.5px] font-medium text-[#5A1E31] mb-3">Three Core Pathways</p>
+              <h2 className="text-[36px] sm:text-[48px] lg:text-[54px] font-normal leading-[1.06] tracking-[-0.025em] text-[#51372E]">
                 Supporting every chapter with calm, practical{' '}
-                <span className="font-cursive text-[50px] sm:text-[66px] lg:text-[74px] text-[#B84D1D] font-normal leading-none">
+                <span className="font-cursive text-[50px] sm:text-[66px] lg:text-[74px] text-[#752D43] font-normal leading-none">
                   care.
                 </span>
               </h2>
             </div>
 
-            <p className="text-[15.5px] leading-[1.68] text-[#3F5246] max-w-sm">
+            <p className="text-[15.5px] leading-[1.68] text-[#634B41] max-w-sm">
               From live online sessions and 1-on-1 coaching to corporate burnout pilots, licensed
               India retreats, and our supervised HerWAY postpartum pathway.
             </p>
@@ -680,7 +680,7 @@ export function SanctuaryScrollStory({
 
           <div
             ref={statsRef}
-            className="mt-14 pt-6 border-t border-[#DDE7DC] grid grid-cols-2 lg:grid-cols-4 gap-8"
+            className="mt-14 pt-6 border-t border-[#D8CEC4] grid grid-cols-2 lg:grid-cols-4 gap-8"
           >
             {SOLUTION_STATS.map((stat) => (
               <CountUpStat
