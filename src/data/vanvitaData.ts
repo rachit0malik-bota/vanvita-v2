@@ -57,13 +57,24 @@ export const HERO_LEGACY_FLYIN_VIDEO =
   '/assets/aistudio/hero_flyin_scrub.mp4';
 
 export const ONLINE_PAVILION_VIDEO =
-  '/assets/aistudio/Tibetan_singing_bowls_in_pavilion_8233a7bd_2fd2a891.mp4';
+  '/assets/aistudio/vanvita_meditation_shala.mp4';
+export const ONLINE_PAVILION_POSTER =
+  '/assets/aistudio/vanvita_meditation_shala_poster.jpg';
 
 export const HERWAY_STEAM_VIDEO =
-  '/assets/aistudio/Herbal_steam_resting_on_tray_06f2b534_a161ab7a.mp4';
+  '/assets/aistudio/vanvita_water_stepping_stones.mp4';
+export const HERWAY_WATER_POSTER =
+  '/assets/aistudio/vanvita_water_stepping_stones_poster.jpg';
 
 export const INDIA_RETREAT_VIDEO =
-  '/assets/aistudio/Yoga_retreat_courtyard_at_sunrise_69510259_bea4ad85.mp4';
+  '/assets/aistudio/vanvita_mountain_retreat.mp4';
+export const INDIA_RETREAT_POSTER =
+  '/assets/aistudio/vanvita_mountain_retreat_poster.jpg';
+
+export const SINGING_BOWL_MALLET_VIDEO =
+  '/assets/aistudio/vanvita_singing_bowl_mallet.mp4';
+export const SINGING_BOWL_MALLET_POSTER =
+  '/assets/aistudio/vanvita_singing_bowl_mallet_poster.jpg';
 
 export interface SanctuaryVideoItem {
   id: string;
@@ -76,44 +87,44 @@ export interface SanctuaryVideoItem {
 
 export const SANCTUARY_WIDESCREEN_VIDEOS: SanctuaryVideoItem[] = [
   {
+    id: 'dawn-breathwork-shala',
+    src: ONLINE_PAVILION_VIDEO,
+    poster: ONLINE_PAVILION_POSTER,
+    tabLabel: 'Dawn Meditation',
+    eyebrow: 'Live Online Shala · Europe & USA Hours',
+    title: 'Seated breathwork and stillness in the cedar pavilion at dawn',
+  },
+  {
+    id: 'singing-bowl-mallet',
+    src: SINGING_BOWL_MALLET_VIDEO,
+    poster: SINGING_BOWL_MALLET_POSTER,
+    tabLabel: 'Tibetan Sound Bowl',
+    eyebrow: 'Acoustic Sound Therapy · Resonance Study',
+    title: 'Hand-hammered bronze bowl vibrating resonant frequencies for nervous system regulation',
+  },
+  {
+    id: 'water-courtyard-steps',
+    src: HERWAY_STEAM_VIDEO,
+    poster: HERWAY_WATER_POSTER,
+    tabLabel: 'Reflection Pool',
+    eyebrow: 'HerWAY Restorative Pathway · Water Sanctuary',
+    title: 'Stepping stones crossing serene dawn waters mirrored in warm limestone',
+  },
+  {
+    id: 'mountain-terrace-yoga',
+    src: INDIA_RETREAT_VIDEO,
+    poster: INDIA_RETREAT_POSTER,
+    tabLabel: 'Mountain Retreat',
+    eyebrow: 'Licensed Residencies in India · Kerala Mist',
+    title: 'Group yoga alignment on open terraces overlooking twilight mountain ridges',
+  },
+  {
     id: 'forest-sanctuary-glide',
     src: '/assets/aistudio/hero_flyin_scrub.mp4',
     poster: '/assets/aistudio/hero_flyin_first_frame.jpg',
-    tabLabel: 'Forest Sanctuary Glide',
-    eyebrow: 'Architectural Flight · Pine Sanctuary',
+    tabLabel: 'Pine Hills Glide',
+    eyebrow: 'Architectural Flight · Forest Shala',
     title: 'Aerial approach gliding through morning pine hills toward the timber yoga pavilion',
-  },
-  {
-    id: 'singing-bowls-meadow',
-    src: '/assets/aistudio/VID-20260816-WA0056_7960c5fc.mp4',
-    poster: '/assets/aistudio/Joga_Strautmali_08082026-264.jpg_b54840e7.jpeg',
-    tabLabel: 'Live Singing Bowls',
-    eyebrow: 'Live Sound & Breath · Open Meadow Pavilion',
-    title: 'Bronze and crystal singing bowls guiding calm daily presence',
-  },
-  {
-    id: 'pavilion-morning-stillness',
-    src: ONLINE_PAVILION_VIDEO,
-    poster: '/assets/aistudio/Joga_Strautmali_08082026-25.jpg_c0f51dd5.jpeg',
-    tabLabel: 'Morning Pavilion',
-    eyebrow: 'Online Wellness Atmosphere · Dawn Light',
-    title: 'Soft morning breeze, sheer linen, and quiet space to breathe',
-  },
-  {
-    id: 'pavilion-resonance',
-    src: '/assets/aistudio/VID-20260816-WA0031_f67f54c9.mp4',
-    poster: '/assets/aistudio/Joga_Strautmali_08082026-313.jpg_761bd277.jpeg',
-    tabLabel: 'Pavilion Sound',
-    eyebrow: 'Restorative Resonance · Timber Shala',
-    title: 'Unhurried acoustic stillness and gentle respiratory pacing',
-  },
-  {
-    id: 'guided-welcome',
-    src: '/assets/aistudio/VID-20260816-WA0045_7e61a05e.mp4',
-    poster: '/assets/aistudio/Joga_Strautmali_08082026-165.jpg_32e94bc1.jpeg',
-    tabLabel: 'Guided Welcome',
-    eyebrow: 'Personal Wellbeing · Live Europe & USA',
-    title: 'Human-led guidance shaped around real schedules and seasons',
   },
 ];
 

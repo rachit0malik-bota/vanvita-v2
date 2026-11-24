@@ -4,6 +4,7 @@ import {
   HERWAY_PILLARS,
   HERWAY_SANCTUARY_IMAGE,
   HERWAY_STEAM_VIDEO,
+  HERWAY_WATER_POSTER,
 } from '../data/vanvitaData';
 import { RevealOnScroll, SectionEntrance } from './RevealOnScroll';
 
@@ -43,7 +44,7 @@ export function HerWaySection({
               <div className="lg:col-span-5 relative min-h-[340px] lg:min-h-[500px] bg-[#51372E]">
                 <video
                   src={HERWAY_STEAM_VIDEO}
-                  poster={HERWAY_SANCTUARY_IMAGE}
+                  poster={HERWAY_WATER_POSTER}
                   autoPlay={!prefersReducedMotion}
                   muted
                   loop

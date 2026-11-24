@@ -4,6 +4,7 @@ import { motion, useReducedMotion } from 'motion/react';
 import {
   BUSINESS_PROGRAMS,
   INDIA_RETREAT_IMAGE,
+  INDIA_RETREAT_POSTER,
   INDIA_RETREAT_VIDEO,
 } from '../data/vanvitaData';
 import { RevealOnScroll, SectionEntrance } from './RevealOnScroll';
@@ -119,7 +120,7 @@ export function BusinessSection({
           <div className="relative rounded-[2.5rem] overflow-hidden border border-[#D8CEC4] soft-card-shadow bg-[#51372E] h-[340px] sm:h-[440px]">
             <video
               src={INDIA_RETREAT_VIDEO}
-              poster={INDIA_RETREAT_IMAGE}
+              poster={INDIA_RETREAT_POSTER}
               autoPlay={!prefersReducedMotion}
               muted
               loop

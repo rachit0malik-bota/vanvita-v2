@@ -12,6 +12,7 @@ import { AnimatePresence, motion, useReducedMotion } from 'motion/react';
 import {
   LIBRARY_TRAVEL_IMAGE,
   MASTER_TEACHERS,
+  ONLINE_PAVILION_POSTER,
   ONLINE_PAVILION_VIDEO,
   PRACTICE_GUIDES,
 } from '../data/vanvitaData';
@@ -201,7 +202,7 @@ export function PracticeLibrary({
           <div className="relative rounded-[2.25rem] overflow-hidden border border-[#D8CEC4] soft-card-shadow bg-[#51372E] h-[250px] sm:h-[320px]">
             <video
               src={ONLINE_PAVILION_VIDEO}
-              poster={LIBRARY_TRAVEL_IMAGE}
+              poster={ONLINE_PAVILION_POSTER}
               autoPlay={!prefersReducedMotion}
               muted
               loop
