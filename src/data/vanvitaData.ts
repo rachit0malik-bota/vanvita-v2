@@ -15,7 +15,7 @@ import {
 } from '../types/vanvita';
 
 export const DAWN_SANCTUARY_IMAGE =
-  '/assets/aistudio/hero_flyin_first_frame.jpg';
+  '/assets/aistudio/hero_burgundy_rose_first_frame.jpg';
 
 export const HERWAY_SANCTUARY_IMAGE =
   '/assets/aistudio/Joga_Strautmali_08082026-114.jpg_d8c0a38e.jpeg';
@@ -51,6 +51,9 @@ export const GARDEN_BREEZE_IMAGE =
   '/assets/aistudio/Joga_Strautmali_08082026-94.jpg_6dbf3e23.jpeg';
 
 export const HERO_FLYIN_VIDEO =
+  '/assets/aistudio/hero_burgundy_rose_scroll.mp4';
+
+export const HERO_LEGACY_FLYIN_VIDEO =
   '/assets/aistudio/hero_flyin_scrub.mp4';
 
 export const ONLINE_PAVILION_VIDEO =
@@ -72,6 +75,14 @@ export interface SanctuaryVideoItem {
 }
 
 export const SANCTUARY_WIDESCREEN_VIDEOS: SanctuaryVideoItem[] = [
+  {
+    id: 'forest-sanctuary-glide',
+    src: '/assets/aistudio/hero_flyin_scrub.mp4',
+    poster: '/assets/aistudio/hero_flyin_first_frame.jpg',
+    tabLabel: 'Forest Sanctuary Glide',
+    eyebrow: 'Architectural Flight · Pine Sanctuary',
+    title: 'Aerial approach gliding through morning pine hills toward the timber yoga pavilion',
+  },
   {
     id: 'singing-bowls-meadow',
     src: '/assets/aistudio/VID-20260816-WA0056_7960c5fc.mp4',

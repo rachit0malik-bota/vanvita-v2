@@ -95,6 +95,35 @@ export function AboutSection({
           </div>
         </RevealOnScroll>
 
+        {/* Full-width Sanctuary Architectural Film (Featured Fly-In Experience) */}
+        <RevealOnScroll delay={0.1} className="mb-12">
+          <div className="relative rounded-[2.5rem] overflow-hidden border border-[#D8CEC4]/60 soft-card-shadow h-[320px] sm:h-[460px] bg-[#3B2314]">
+            <video
+              src="/assets/aistudio/hero_flyin_scrub.mp4"
+              poster="/assets/aistudio/hero_flyin_first_frame.jpg"
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-full object-cover brightness-[0.96]"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#3B2314]/85 via-transparent to-transparent pointer-events-none" />
+            <div className="absolute bottom-6 left-6 right-6 sm:bottom-8 sm:left-8 sm:right-8 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 text-[#F2EAE5]">
+              <div>
+                <p className="font-display tracking-[0.2em] uppercase text-[11.5px] font-medium text-[#E8508A] mb-1.5">
+                  Sanctuary Architecture &amp; Atmosphere
+                </p>
+                <h3 className="font-serif text-[22px] sm:text-[28px] font-normal leading-snug">
+                  Nestled in pine hills, designed for quiet daily return.
+                </h3>
+              </div>
+              <span className="self-start sm:self-auto px-4 py-1.5 rounded-full bg-white/15 backdrop-blur-md border border-white/20 text-[12px] font-medium tracking-wide">
+                Live Shala Video
+              </span>
+            </div>
+          </div>
+        </RevealOnScroll>
+
         {/* Four Sanctuary Detail Photographs */}
         <RevealOnScroll delay={0.12} className="mb-14">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">

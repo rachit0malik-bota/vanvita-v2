@@ -51,7 +51,7 @@ export function Navbar({
           className="inline-flex items-center gap-2.5 whitespace-nowrap shrink-0 cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-4 rounded-full"
         >
           <VanvitaLogo size={34} />
-          <span className="text-[18px] sm:text-[19px] font-semibold tracking-[-0.01em] text-[#51372E]">
+          <span className="font-display text-[17px] sm:text-[18px] tracking-[0.16em] font-medium text-[#3B2314]">
             VANVITA
           </span>
         </motion.button>

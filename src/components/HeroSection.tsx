@@ -48,7 +48,7 @@ export function HeroSection({
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.08, ease: WELLNESS_EASE }}
-            className="text-[14px] text-[#72584D] mb-6"
+            className="font-display tracking-[0.16em] uppercase text-[12px] text-[#6E5343] mb-6"
           >
             Private Global Yoga & Wellbeing · London · Zurich · New York · Kyoto
           </motion.p>
@@ -57,10 +57,10 @@ export function HeroSection({
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.05, delay: 0.16, ease: WELLNESS_EASE }}
-            className="text-[46px] sm:text-[62px] lg:text-[74px] font-normal text-[#51372E] leading-[1.04] tracking-[-0.025em] mb-6"
+            className="font-serif text-[46px] sm:text-[62px] lg:text-[74px] font-normal text-[#3B2314] leading-[1.06] tracking-[-0.015em] mb-6"
           >
             Private yoga and breathwork, composed for a life in{' '}
-            <span className="font-cursive text-[62px] sm:text-[82px] lg:text-[96px] text-[#DC7188] font-normal leading-none inline-block -mb-2">
+            <span className="font-cursive text-[62px] sm:text-[82px] lg:text-[96px] text-[#E8508A] font-normal leading-none inline-block -mb-2">
               balance.
             </span>
           </motion.h1>

@@ -417,19 +417,20 @@ export function SanctuaryScrollStory({
                 initial={{ opacity: 0, y: 18 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.95, delay: 0.08, ease: WELLNESS_EASE }}
-                className="text-[46px] sm:text-[64px] lg:text-[76px] font-medium text-[#51372E] leading-[1.02] tracking-[-0.03em] mb-5"
+                className="font-serif text-[46px] sm:text-[64px] lg:text-[78px] font-normal text-[#3B2314] leading-[1.04] tracking-[-0.015em] mb-5"
               >
-                Wellbeing, made{' '}
-                <span className="font-cursive text-[66px] sm:text-[88px] lg:text-[104px] text-[#752D43] font-normal leading-none inline-block -mb-2">
-                  personal.
-                </span>
+                Vanvita{' '}
+                <span className="font-cursive text-[66px] sm:text-[88px] lg:text-[104px] text-[#E8508A] font-normal leading-none inline-block -mb-2">
+                  wellbeing
+                </span>{' '}
+                for life
               </motion.h1>
 
               <motion.p
                 initial={{ opacity: 0, y: 14 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.9, delay: 0.18, ease: WELLNESS_EASE }}
-                className="text-[16px] sm:text-[18px] leading-[1.65] text-[#223328] max-w-[560px] mx-auto mb-7 font-normal"
+                className="font-sans-clean text-[16px] sm:text-[18px] leading-[1.65] text-[#6E5343] max-w-[560px] mx-auto mb-7 font-normal"
               >
                 Expert-led yoga, meditation, breathwork, corporate burnout support, and HerWAY
                 postpartum guidance—live online for Europe and the USA, and through retreats in
@@ -508,12 +509,12 @@ export function SanctuaryScrollStory({
               className="absolute inset-0 z-20 flex items-center justify-center px-6 pointer-events-none will-change-[transform,opacity]"
             >
               <div className="max-w-3xl text-center text-[#F2EAE5]">
-                <p className="text-[14px] font-medium text-[#E8899D] mb-4">Our Purpose</p>
-                <h2 className="text-[38px] sm:text-[54px] lg:text-[66px] font-medium leading-[1.06] tracking-[-0.025em] mb-5">
+                <p className="font-display tracking-[0.2em] uppercase text-[12px] font-medium text-[#E8508A] mb-4">Our Purpose</p>
+                <h2 className="font-serif text-[38px] sm:text-[54px] lg:text-[66px] font-normal leading-[1.08] tracking-[-0.015em] mb-5">
                   Your wellness, guided.
                   <br />
                   Live well. Live{' '}
-                  <span className="font-cursive text-[56px] sm:text-[78px] lg:text-[92px] text-[#F1A77F] font-normal leading-none">
+                  <span className="font-cursive text-[56px] sm:text-[78px] lg:text-[92px] text-[#E8508A] font-normal leading-none">
                     fully.
                   </span>
                 </h2>
