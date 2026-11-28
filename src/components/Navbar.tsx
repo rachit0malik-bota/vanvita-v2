@@ -40,7 +40,7 @@ export function Navbar({
         initial={{ opacity: 0, y: -12 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
-        className="pointer-events-auto w-full max-w-6xl bg-white/84 backdrop-blur-[20px] border border-[#D8CEC4] rounded-full soft-card-shadow px-4 sm:px-5 h-14 sm:h-16 flex items-center justify-between gap-3"
+        className="pointer-events-auto w-full max-w-6xl bg-[#752D43]/94 backdrop-blur-[20px] border border-[#DC7188]/30 rounded-full shadow-[0_16px_40px_rgba(117,45,67,0.32)] px-4 sm:px-5 h-14 sm:h-16 flex items-center justify-between gap-3 text-[#FAF6F3]"
       >
         {/* Zone 1: Signature nautilus emblem + wordmark */}
         <motion.button
@@ -50,8 +50,8 @@ export function Navbar({
           onClick={() => handleLinkClick('home')}
           className="inline-flex items-center gap-2.5 whitespace-nowrap shrink-0 cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-4 rounded-full"
         >
-          <VanvitaLogo size={34} />
-          <span className="font-display text-[17px] sm:text-[18px] tracking-[0.16em] font-medium text-[#3B2314]">
+          <VanvitaLogo size={34} inverted={true} />
+          <span className="font-display text-[17px] sm:text-[18px] tracking-[0.16em] font-medium text-[#FAF6F3]">
             VANVITA
           </span>
         </motion.button>
@@ -59,7 +59,7 @@ export function Navbar({
         {/* Zone 2: Clean single-line brief menu links */}
         <nav
           aria-label="Primary pages"
-          className="hidden lg:flex items-center gap-5 xl:gap-6 text-[13.5px] font-medium text-[#72584D]"
+          className="hidden lg:flex items-center gap-5 xl:gap-6 text-[13.5px] font-medium"
         >
           {NAV_ITEMS.map((item) => {
             const isActive = currentPage === item.page;
@@ -70,14 +70,14 @@ export function Navbar({
                 onClick={() => handleLinkClick(item.page)}
                 aria-current={isActive ? 'page' : undefined}
                 className={`relative py-1 whitespace-nowrap shrink-0 transition-colors duration-150 cursor-pointer ${
-                  isActive ? 'text-[#51372E]' : 'hover:text-[#752D43]'
+                  isActive ? 'text-[#FAF6F3] font-semibold' : 'text-[#F2EAE5]/82 hover:text-white'
                 }`}
               >
                 {item.label}
                 {isActive && (
                   <motion.span
                     layoutId="vanvitaNavUnderline"
-                    className="absolute left-0 right-0 -bottom-0.5 h-[2px] rounded-full bg-[#752D43]"
+                    className="absolute left-0 right-0 -bottom-0.5 h-[2px] rounded-full bg-[#FF9EBA]"
                     transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
                   />
                 )}
@@ -99,13 +99,13 @@ export function Navbar({
             aria-current={isBusinessActive ? 'page' : undefined}
             className={`hidden sm:inline-flex items-center justify-center gap-1.5 px-4 py-2 text-[12.5px] font-medium rounded-full border transition-colors duration-150 whitespace-nowrap shrink-0 cursor-pointer min-h-[38px] ${
               isBusinessActive
-                ? 'bg-[#752D43] border-[#752D43] text-[#F2EAE5]'
-                : 'bg-[#FBF0F2] border-[#752D43]/25 text-[#51372E] hover:bg-[#F5EAE8]'
+                ? 'bg-white text-[#752D43] border-white shadow-xs'
+                : 'bg-white/12 border-white/20 text-[#FAF6F3] hover:bg-white/20'
             }`}
           >
             <Building2
               className={`w-3.5 h-3.5 shrink-0 ${
-                isBusinessActive ? 'text-[#F2EAE5]' : 'text-[#752D43]'
+                isBusinessActive ? 'text-[#752D43]' : 'text-[#FF9EBA]'
               }`}
             />
             <span>For Business</span>
@@ -119,7 +119,7 @@ export function Navbar({
               setMobileOpen(false);
               onBookClick();
             }}
-            className="hidden sm:inline-flex items-center justify-center px-4 sm:px-5 py-2 text-[12.5px] font-medium text-[#F2EAE5] bg-[#51372E] hover:bg-[#752D43] rounded-full transition-colors duration-200 whitespace-nowrap shrink-0 cursor-pointer min-h-[38px]"
+            className="hidden sm:inline-flex items-center justify-center px-4 sm:px-5 py-2 text-[12.5px] font-semibold text-[#752D43] bg-[#FAF6F3] hover:bg-white rounded-full transition-colors duration-200 whitespace-nowrap shrink-0 cursor-pointer min-h-[38px] shadow-sm"
           >
             Free Intro
           </motion.button>
@@ -129,7 +129,7 @@ export function Navbar({
             aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={mobileOpen}
             onClick={() => setMobileOpen((prev) => !prev)}
-            className="lg:hidden inline-flex items-center justify-center w-10 h-10 text-[#51372E] hover:bg-[#EAE1DA] rounded-full transition-colors cursor-pointer"
+            className="lg:hidden inline-flex items-center justify-center w-10 h-10 text-[#FAF6F3] hover:bg-white/15 rounded-full transition-colors cursor-pointer"
           >
             {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>

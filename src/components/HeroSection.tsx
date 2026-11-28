@@ -57,7 +57,7 @@ export function HeroSection({
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.05, delay: 0.16, ease: WELLNESS_EASE }}
-            className="font-serif text-[46px] sm:text-[62px] lg:text-[74px] font-normal text-[#3B2314] leading-[1.06] tracking-[-0.015em] mb-6"
+            className="font-serif text-[46px] sm:text-[62px] lg:text-[74px] font-normal text-[#752D43] leading-[1.06] tracking-[-0.015em] mb-6"
           >
             Private yoga and breathwork, composed for a life in{' '}
             <span className="font-cursive text-[62px] sm:text-[82px] lg:text-[96px] text-[#E8508A] font-normal leading-none inline-block -mb-2">

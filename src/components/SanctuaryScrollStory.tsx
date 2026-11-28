@@ -531,7 +531,7 @@ export function SanctuaryScrollStory({
                 initial={{ opacity: 0, y: 18 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.95, delay: 0.08, ease: WELLNESS_EASE }}
-                className="font-serif text-[46px] sm:text-[64px] lg:text-[78px] font-normal text-[#3B2314] leading-[1.04] tracking-[-0.015em] mb-5 drop-shadow-[0_1px_3px_rgba(255,255,255,0.9)]"
+                className="font-serif text-[46px] sm:text-[64px] lg:text-[78px] font-normal text-[#752D43] leading-[1.04] tracking-[-0.015em] mb-5 drop-shadow-[0_1px_3px_rgba(255,255,255,0.9)]"
               >
                 Vanvita{' '}
                 <span className="font-cursive text-[66px] sm:text-[88px] lg:text-[104px] text-[#E8508A] font-normal leading-none inline-block -mb-2">
